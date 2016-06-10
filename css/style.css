@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'inconsolata';
+    src: url('../fonts/Inconsolata.otf');
+}
+
+body {
+    margin: 0;
+}
+nav {
+    height: 50px;
+    width: 100%;
+    padding: 0;
+    background-color: #2a2e5a;
+}
+
+                /* CSS za toolbar */
+#title {
+    color:#fff;
+    text-decoration: none;
+    font-style: italic;
+    font-family: inconsolata;
+    font-size: 16pt;
+}
+#title_div {
+    display: block;
+    float: left;
+    margin: 12px 100px 0 10px;
+    height: 33px
+}
+nav > a {
+    color:#fff;
+    text-decoration: none;
+    float: left;
+    vertical-align: middle;
+    font-family: inconsolata;
+    display: block;
+    padding: 14px 15px 15px 15px;
+    font-size:14pt;
+    margin-top:0;
+}
+nav > a:hover, .a_selected {
+    background: #42488e;
+}
+nav > a:active {
+    background: #5058ad;
+}
