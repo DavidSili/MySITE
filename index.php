@@ -48,7 +48,7 @@ $sitepos="index";
 </section>
 
 <footer></footer>
-<script src="">
+<script>
     alert('hello!');
     console.log('A');
     var slides = [
