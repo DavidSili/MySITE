@@ -5,17 +5,19 @@
 
 body {
     margin: 0;
+    background: #f8f8f8;
 }
 nav {
     height: 50px;
     width: 100%;
     padding: 0;
-    background-color: #2a2e5a;
+    background-color: #363636;
+    overflow: hidden;
 }
 
                 /* CSS za toolbar */
 #title {
-    color:#fff;
+    color: #f8f8f8;
     text-decoration: none;
     font-style: italic;
     font-family: inconsolata;
@@ -24,23 +26,75 @@ nav {
 #title_div {
     display: block;
     float: left;
-    margin: 12px 100px 0 10px;
+    margin: 12px 50px 0 10px;
     height: 33px
 }
 nav > a {
-    color:#fff;
+    color: #f8f8f8;
     text-decoration: none;
     float: left;
     vertical-align: middle;
     font-family: inconsolata;
     display: block;
-    padding: 14px 15px 15px 15px;
+    padding: 14px 10px 15px 10px;
     font-size:14pt;
     margin-top:0;
 }
 nav > a:hover, .a_selected {
-    background: #42488e;
+    text-decoration: underline;
 }
 nav > a:active {
-    background: #5058ad;
+    text-decoration: underline;
+}
+#social_btns {
+    float: right;
+    display: block;
+    height: 40px;
+    margin: 10px 10px 0 0;
+}
+#social_btns a {
+    text-decoration: none;
+}
+#social_btns img {
+    height: 30px;
+}
+                /* CSS za index */
+#index_wrap h1 {
+    padding:0;
+    margin: 40px 0 0 0;
+    color: #cc3827;
+}
+#index_wrap, #index_showcase {
+    color: #000;
+    font-family: Arial;
+    float:left;
+}
+#index_wrap {
+    width:40%;
+}
+#index_showcase {
+    width:60%;
+}
+#index_innersections {
+    margin:10px;
+}
+#index_zanimanje {
+    font-size:28pt;
+    font-family: inconsolata;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+#index_znanja {
+    font-family: inconsolata;
+    font-size: 12pt;
+    margin-bottom: 25px;
+}
+#dugme {
+    background-color: #cc3827;
+    color: #f8f8f8;
+    padding:10px;
+    font-size:14pt;
+    font-weight:bold;
+    width:58px;
 }
