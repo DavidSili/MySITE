@@ -51,7 +51,29 @@ $sitepos="index";
     </section>
 </div>
 
+<<<<<<< HEAD
 <footer><?php include('views/footer.php');?></footer>
 <script src="js/carouselsettings1.js"></script>
+=======
+<footer></footer>
+<script>
+    alert('hello!');
+    console.log('A');
+    var slides = [
+        {src: 'images/carousel1.jpg'},
+        {src: 'images/carousel2.jpg'},
+        {src: 'images/carousel3.jpg'},
+        {src: 'images/carousel4.jpg'},
+    ];
+    console.log('B');
+    $('.carousel-demo').jR3DCarousel({
+        width : 600,
+        height: 450,
+        slides: slides,
+        animation: "slide3D"
+    });
+    console.log('C');
+</script>
+>>>>>>> origin/master
 </body>
 </html>
