@@ -17,6 +17,21 @@ function lang($phrase){
         'INDEX5' => 'Bavim se izradom internet aplikacija koje se mogu koristiti na kompjuterima, tabletima i pametnim telefonima. Posebno volim da pravim mini-ERP rešenja i CRM programe.',
         'INDEX6' => 'Kontakt',
         'INDEX7' => 'U svakom trenutku možete da me kontaktirate putem e-mail-a, a preko mobilnog telefona radnim danima od 7:30 do 19:00 na +381 63 540 484 i biće mi drago da porazgovaramo o vašem projektu.',
+        'SAMPLE_PROJECTS' => 'Neki od projekata:',
+        'CALENDAR_TITLE' => 'Kalendar dostupnosti',
+        'USUAL_AVAIL' => 'Uobičajena dostupnost',
+        'AVAIL_TEXT' => 'Uglavnom sam dostupan svakog dana osim subote, ukoliko drugačije nije naznačeno u kalendaru. Najlakše ćete me dobiti preko mobilnog telefona do 20h na brojeve: 063/540-484 i 060/8080-612 a sa zadovoljstvom ću odvojiti vreme da se dogovorimo oko željenog projekta.</p><p>Čak i ako mi je raspored pun, slobodno mi ostavite poruku u vezi projekta za koji ste zainteresovani kako bi pokušali da nađemo neko rešenje koje bi odgovaralo i vama i meni.',
+        'AVAIL_PLACEHOLDER' => 'Kontakt u vezi dostupnosti',
+        'AVAIL_NAME' => 'Ime',
+        'AVAIL_EMAIL' => 'e-mail',
+        'AVAIL_OTHER' => 'Ostale informacije za kontakt - firma? mesto? veb-stranica?',
+        'AVAIL_WHEN' => 'Za kada vam je potrebna pomoć',
+        'AVAIL_MESSAGE' => 'Poruka...',
+        'AVAIL_SEND' => 'Pošalji poruku',
+        'CONTACT_ME' => 'Kontaktirajte me',
+        'CONTACT_SENDMESSAGE' => 'Pošaljite mi poruku',
+        'CONTACT_TEXT' => 'Otvoren sam i za rad po ugovoru i po projektu tako da ako postoji bilo šta što vas interesuje ili vam treba pomoć, slobodno me kontaktirajte. Najbrže me možete dobiti preko mobilnog telefona, ali najsigurniji način je ako mi pošaljete e-mail ili iskoristite ovo polje za slanje poruke.</p><p>Takođe <a href="views/availability.php">ovde možete da pogledate i moju dostupnost</a>, ali nemojte dozvoliti da vas obeshrabri ako primetite da je kalendar ispunjen, uvek se spreman za razgovor i pronalaženje nekog rešenja koje će i vama i meni odgovarati.',
+        'CONTACT_PLACEHOLDER' => 'Direktni kontakt',
     );
     return $lang[$phrase];
 }

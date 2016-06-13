@@ -5,17 +5,32 @@
 
 body {
     margin: 0;
-    background: #f8f8f8;
+    background: #d6d6d6;
 }
+h1 {
+    color: #cc3827;
+}
+h1 a {
+    text-decoration: none;
+    color: #cc3827;
+}
+footer {
+    position:absolute;
+    bottom:0;
+    height:50px;
+}
+
+                /* CSS za toolbar */
+
 nav {
+    position:absolute;
+    top:0;
     height: 50px;
     width: 100%;
     padding: 0;
     background-color: #363636;
     overflow: hidden;
 }
-
-                /* CSS za toolbar */
 #title {
     color: #f8f8f8;
     text-decoration: none;
@@ -46,23 +61,45 @@ nav > a:hover, .a_selected {
 nav > a:active {
     text-decoration: underline;
 }
+
+                /* CSS za footer */
+
+footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height: 50px;
+    padding: 0;
+    background-color: #363636;
+}
 #social_btns {
-    float: right;
+    text-align: center;
     display: block;
     height: 40px;
-    margin: 10px 10px 0 0;
+    margin-top:10px;
 }
 #social_btns a {
     text-decoration: none;
+    margin: 0px 20px 0 0;
 }
 #social_btns img {
     height: 30px;
 }
+
                 /* CSS za index */
+
+#index_wrapbig {
+    position:absolute;
+    top:50px;
+    bottom:50px;
+    left:0;
+    right:0;
+    background-color: #f8f8f8;
+    overflow-y:auto;
+}
 #index_wrap h1 {
     padding:0;
     margin: 40px 0 0 0;
-    color: #cc3827;
 }
 #index_wrap, #index_showcase {
     color: #000;
@@ -75,11 +112,13 @@ nav > a:active {
 #index_showcase {
     width:60%;
 }
-#index_innersections {
+.index_innersections {
     margin:10px;
+    overflow: hidden;
 }
 #index_zanimanje {
-    font-size:28pt;
+    font-size: 28pt;
+    font-size: 5vw;
     font-family: inconsolata;
     font-style: italic;
     font-weight: bold;
@@ -90,11 +129,91 @@ nav > a:active {
     font-size: 12pt;
     margin-bottom: 25px;
 }
-#dugme {
-    background-color: #cc3827;
-    color: #f8f8f8;
-    padding:10px;
-    font-size:14pt;
-    font-weight:bold;
-    width:58px;
+#index_showcase h1 {
+    padding: 0 0 5px 0;
+    margin: 0 0 5px 0;
+    text-align: center;
+    border-bottom: 2px solid #CC3827;
+}
+#carousel {
+    float:right;
+}
+
+                /* CSS za About */
+
+#about_wrapbig, #avail_wrapbig {
+    overflow: hidden;
+    background-color: #f8f8f8;
+    padding-bottom: 5px;
+}
+#about_wrap {
+
+}
+
+                /* CSS za Availability */
+
+#avail_wrapbig {
+    position:absolute;
+    top:50px;
+    bottom:50px;
+    left:0;
+    right:0;
+    overflow-y: auto;
+    min-height: 410px;
+    font-family:Arial;
+}
+#avail_text {
+    min-height:410px;
+    min-width:135px;
+    padding:5px;
+    float:left;
+    margin-right:610px;
+}
+#avail_form input, #avail_form textarea, #contact_form input, #contact_form textarea {
+    width:100%;
+    font-size:12pt;
+    font-family: Arial;
+    margin-bottom:5px;
+}
+#avail_form > #avail_send, #contact_form > #contact_send {
+    width:130px;
+    height:25px;
+    margin-bottom:0;
+}
+#avail_calendar {
+    position:absolute;
+    top:5px;
+    right:5px;
+}
+                /* CSS za contact */
+
+.displaynone {
+    display:none;
+}
+#contact_wrapbig {
+    position:absolute;
+    top:50px;
+    bottom:50px;
+    left:0;
+    right:0;
+    overflow-y: auto;
+    font-family:Arial;
+}
+#contact_text {
+    width:50%;
+    float:left;
+}
+#contact_info {
+    width:50%;
+    float:left;
+}
+.contact_innersections {
+    margin:10px;
+    overflow: hidden;
+}
+#contact_text a {
+    color:#000;
+}
+#contact_text h1 {
+    margin-top:5px;
 }

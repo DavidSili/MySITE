@@ -22,49 +22,36 @@ $sitepos="index";
           href="images/favicon.gif">
     <meta name="description" content="<?php echo lang('DESCRIPTION');?>">
     <meta name="author" content="<?php echo lang('AUTHOR');?>">
+    <?php echo $base; ?>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="js/jR3DCarousel.js"></script>
 </head>
-<body>
+<body id="body_index">
 <nav><?php include('views/toolbar.php');?></nav>
 
-<section id="index_wrap">
-    <div id="index_innersections">
-        <div id="index_zanimanje"><?php echo lang('INDEX1');?></div>
-        <div id="index_znanja"><?php echo lang('INDEX2');?></div>
-        <div><h1><?php echo lang('AVAILABILITY');?></h1></div>
-        <div><?php echo lang('INDEX3');?></div>
-        <div><h1><?php echo lang('INDEX4');?></h1></div>
-        <div><?php echo lang('INDEX5');?></div>
-        <div><h1><?php echo lang('INDEX6');?></h1></div>
-        <div><?php echo lang('INDEX7');?></div>
-    </div>
-</section>
-<section id="index_showcase">
-    <div id="index_innersections">
-        <div id="carousel" class="carousel-demo"></div>
-    </div>
-</section>
+<div id="index_wrapbig">
+    <section id="index_wrap">
+        <div class="index_innersections">
+            <div id="index_zanimanje"><?php echo lang('INDEX1');?></div>
+            <div id="index_znanja"><?php echo lang('INDEX2');?></div>
+            <h1><a href="views/availability.php" alt="<?php echo lang('AVAILABILITY');?>"><?php echo lang('AVAILABILITY');?></a></h1>
+            <p><?php echo lang('INDEX3');?></p>
+            <h1><?php echo lang('INDEX4');?></h1>
+            <p><?php echo lang('INDEX5');?></p>
+            <h1><?php echo lang('INDEX6');?></h1>
+            <p><?php echo lang('INDEX7');?></p>
+        </div>
+    </section>
+    <section id="index_showcase">
+        <div class="index_innersections">
+            <h1><?php echo lang('SAMPLE_PROJECTS');?></h1>
+            <div id="carousel" class="carousel-demo"></div>
+        </div>
+    </section>
+</div>
 
-<footer></footer>
-<script src="">
-    alert('hello!');
-    console.log('A');
-    var slides = [
-        {src: 'images/carousel1.jpg'},
-        {src: 'images/carousel2.jpg'},
-        {src: 'images/carousel3.jpg'},
-        {src: 'images/carousel4.jpg'},
-    ];
-    console.log('B');
-    $('.carousel-demo').jR3DCarousel({
-        width : 600,
-        height: 450,
-        slides: slides,
-        animation: "slide3D"
-    });
-    console.log('C');
-</script>
+<footer><?php include('views/footer.php');?></footer>
+<script src="js/carouselsettings1.js"></script>
 </body>
 </html>
