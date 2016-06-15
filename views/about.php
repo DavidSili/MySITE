@@ -30,9 +30,21 @@ $sitepos="about";
 <body>
 <nav><?php include('../views/toolbar.php');?></nav>
 
-<div id="about_wrapbig">
-    <section id="about_wrap">
-    </section>
+<div id="wrapbig">
+    <div id="wrapsmall">
+        <div class="innersection2">
+            <h1><?php echo lang('ABOUT_ME'); ?></h1>
+            <p class="veci_tekst"><?php echo lang('ABOUT_TEXT1'); ?></p>
+            <p><?php echo lang('ABOUT_TEXT2'); ?></p>
+            <p class="veci_tekst"><?php echo lang('ABOUT_TEXT3'); ?></p>
+            <div id="image_container">
+                <img id="imgApex" src="images/logoApex.gif" alt="logo apex">
+                <img id="imgPF" src="images/logoPathfinder.gif" alt="logo pathfinder">
+                <img id="imgLoR" src="images/logoLoR.gif" alt="logo land of roses">
+                <img id="imgKZ" src="images/logoKZ.gif" alt="logo klub zdravlja">
+            </div>
+        </div>
+    </div>
 </div>
 
 <footer><?php include('../views/footer.php');?></footer>

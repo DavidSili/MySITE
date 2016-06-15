@@ -28,23 +28,25 @@ $sitepos="availability";
 <body id="body_avail">
 <nav><?php include('../views/toolbar.php');?></nav>
 
-<div id="avail_wrapbig">
-    <section id="avail_text">
-        <h1><?php echo lang('USUAL_AVAIL')?></h1>
-        <p><?php echo lang('AVAIL_TEXT')?></p>
-        <fieldset id="avail_form">
-            <legend><?php echo lang('AVAIL_PLACEHOLDER') ?></legend>
-            <input type="text" id="avail_name" placeholder="<?php echo lang('AVAIL_NAME'); ?>" title="<?php echo lang('AVAIL_NAME'); ?>"/><br>
-            <input type="text" id="avail_email" placeholder="<?php echo lang('AVAIL_EMAIL'); ?>" title="<?php echo lang('AVAIL_EMAIL'); ?>"/><br>
-            <input type="text" id="avail_other" placeholder="<?php echo lang('AVAIL_OTHER'); ?>" title="<?php echo lang('AVAIL_OTHER'); ?>"/><br>
-            <input type="text" id="avail_when" placeholder="<?php echo lang('AVAIL_WHEN'); ?>" title="<?php echo lang('AVAIL_WHEN'); ?>"/><br>
-            <textarea id="avail_message" placeholder="<?php echo lang('AVAIL_MESSAGE'); ?>" title="<?php echo lang('AVAIL_MESSAGE'); ?>" rows="4"></textarea><br>
-            <input id="avail_send" type="button" value="<?php echo lang('AVAIL_SEND'); ?>" onclick="sendAvail()" />
-        </fieldset>
-    </section>
-    <section id="avail_calendar">
-        <iframe src="https://calendar.google.com/calendar/embed?title=<?php echo lang('CALENDAR_TITLE'); ?>&amp;height=500&amp;wkst=1&amp;hl=<?php echo $language; ?>&amp;bgcolor=%23FFFFFF&amp;src=00vpml18md0km2i9rkel4vdm7k%40group.calendar.google.com&amp;color=%2323164E&amp;ctz=Europe%2FBelgrade" style="border-width:0" width="600" height="400" frameborder="0" scrolling="no"></iframe>
-    </section>
+<div id="wrapbig">
+    <div id="wrapsmall">
+        <section id="avail_text">
+            <h1><?php echo lang('USUAL_AVAIL')?></h1>
+            <p><?php echo lang('AVAIL_TEXT')?></p>
+            <fieldset id="avail_form">
+                <legend><?php echo lang('AVAIL_PLACEHOLDER') ?></legend>
+                <input type="text" id="avail_name" placeholder="<?php echo lang('AVAIL_NAME'); ?>" title="<?php echo lang('AVAIL_NAME'); ?>"/><br>
+                <input type="text" id="avail_email" placeholder="<?php echo lang('AVAIL_EMAIL'); ?>" title="<?php echo lang('AVAIL_EMAIL'); ?>"/><br>
+                <input type="text" id="avail_other" placeholder="<?php echo lang('AVAIL_OTHER'); ?>" title="<?php echo lang('AVAIL_OTHER'); ?>"/><br>
+                <input type="text" id="avail_when" placeholder="<?php echo lang('AVAIL_WHEN'); ?>" title="<?php echo lang('AVAIL_WHEN'); ?>"/><br>
+                <textarea id="avail_message" placeholder="<?php echo lang('AVAIL_MESSAGE'); ?>" title="<?php echo lang('AVAIL_MESSAGE'); ?>" rows="4"></textarea><br>
+                <input id="avail_send" type="button" value="<?php echo lang('AVAIL_SEND'); ?>" onclick="sendAvail()" />
+            </fieldset>
+        </section>
+        <section id="avail_calendar">
+            <iframe src="https://calendar.google.com/calendar/embed?title=<?php echo lang('CALENDAR_TITLE'); ?>&amp;height=500&amp;wkst=1&amp;hl=<?php echo $language; ?>&amp;bgcolor=%23FFFFFF&amp;src=00vpml18md0km2i9rkel4vdm7k%40group.calendar.google.com&amp;color=%2323164E&amp;ctz=Europe%2FBelgrade" style="border-width:0" width="600" height="400" frameborder="0" scrolling="no"></iframe>
+        </section>
+    </div>
 </div>
 
 <footer><?php include('../views/footer.php');?></footer>

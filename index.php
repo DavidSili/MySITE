@@ -30,50 +30,29 @@ $sitepos="index";
 <body id="body_index">
 <nav><?php include('views/toolbar.php');?></nav>
 
-<div id="index_wrapbig">
-    <section id="index_wrap">
-        <div class="index_innersections">
-            <div id="index_zanimanje"><?php echo lang('INDEX1');?></div>
-            <div id="index_znanja"><?php echo lang('INDEX2');?></div>
-            <h1><a href="views/availability.php" alt="<?php echo lang('AVAILABILITY');?>"><?php echo lang('AVAILABILITY');?></a></h1>
-            <p><?php echo lang('INDEX3');?></p>
-            <h1><?php echo lang('INDEX4');?></h1>
-            <p><?php echo lang('INDEX5');?></p>
-            <h1><?php echo lang('INDEX6');?></h1>
-            <p><?php echo lang('INDEX7');?></p>
-        </div>
-    </section>
-    <section id="index_showcase">
-        <div class="index_innersections">
-            <h1><?php echo lang('SAMPLE_PROJECTS');?></h1>
-            <div id="carousel" class="carousel-demo"></div>
-        </div>
-    </section>
+<div id="wrapbig">
+    <div id="wrapsmall">
+        <section id="index_wrap">
+            <div class="innersections">
+                <div id="index_zanimanje"><?php echo lang('INDEX1');?></div>
+                <div id="index_znanja"><?php echo lang('INDEX2');?></div>
+                <h1><a href="views/availability.php" alt="<?php echo lang('AVAILABILITY');?>"><?php echo lang('AVAILABILITY');?></a></h1>
+                <p><?php echo lang('INDEX3');?></p>
+                <h1><?php echo lang('INDEX4');?></h1>
+                <p><?php echo lang('INDEX5');?></p>
+                <h1><?php echo lang('INDEX6');?></h1>
+                <p><?php echo lang('INDEX7');?></p>
+            </div>
+        </section>
+        <section id="index_showcase">
+            <div class="innersections">
+                <h1><?php echo lang('SAMPLE_PROJECTS');?></h1>
+                <div id="carousel" class="carousel-demo"></div>
+            </div>
+        </section>
+    </div>
 </div>
-
-<<<<<<< HEAD
 <footer><?php include('views/footer.php');?></footer>
 <script src="js/carouselsettings1.js"></script>
-=======
-<footer></footer>
-<script>
-    alert('hello!');
-    console.log('A');
-    var slides = [
-        {src: 'images/carousel1.jpg'},
-        {src: 'images/carousel2.jpg'},
-        {src: 'images/carousel3.jpg'},
-        {src: 'images/carousel4.jpg'},
-    ];
-    console.log('B');
-    $('.carousel-demo').jR3DCarousel({
-        width : 600,
-        height: 450,
-        slides: slides,
-        animation: "slide3D"
-    });
-    console.log('C');
-</script>
->>>>>>> origin/master
 </body>
 </html>

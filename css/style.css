@@ -1,3 +1,5 @@
+                /* Globalni CSSovi */
+
 @font-face {
     font-family: 'inconsolata';
     src: url('../fonts/Inconsolata.otf');
@@ -18,6 +20,26 @@ footer {
     position:absolute;
     bottom:0;
     height:50px;
+}
+#wrapbig {
+    position:absolute;
+    top:50px;
+    bottom:50px;
+    left:0;
+    right:0;
+    background-color: #d6d6d6;
+    overflow-y:auto;
+    font-family:Arial;
+
+}
+#wrapsmall {
+    background-color: #f8f8f8;
+    width:100%;
+    overflow:hidden;
+}
+.innersections {
+    margin:10px;
+    overflow: hidden;
 }
 
                 /* CSS za toolbar */
@@ -61,7 +83,28 @@ nav > a:hover, .a_selected {
 nav > a:active {
     text-decoration: underline;
 }
+blink, .blink {
+    -webkit-animation: blink 1s step-end infinite;
+    -moz-animation: blink 1s step-end infinite;
+    -o-animation: blink 1s step-end infinite;
+    animation: blink 1s step-end infinite;
+}
 
+@-webkit-keyframes blink {
+    67% { opacity: 0 }
+}
+
+@-moz-keyframes blink {
+    67% { opacity: 0 }
+}
+
+@-o-keyframes blink {
+    67% { opacity: 0 }
+}
+
+@keyframes blink {
+    67% { opacity: 0 }
+}
                 /* CSS za footer */
 
 footer {
@@ -88,15 +131,6 @@ footer {
 
                 /* CSS za index */
 
-#index_wrapbig {
-    position:absolute;
-    top:50px;
-    bottom:50px;
-    left:0;
-    right:0;
-    background-color: #f8f8f8;
-    overflow-y:auto;
-}
 #index_wrap h1 {
     padding:0;
     margin: 40px 0 0 0;
@@ -111,10 +145,6 @@ footer {
 }
 #index_showcase {
     width:60%;
-}
-.index_innersections {
-    margin:10px;
-    overflow: hidden;
 }
 #index_zanimanje {
     font-size: 28pt;
@@ -141,31 +171,45 @@ footer {
 
                 /* CSS za About */
 
-#about_wrapbig, #avail_wrapbig {
-    overflow: hidden;
-    background-color: #f8f8f8;
-    padding-bottom: 5px;
-}
-#about_wrap {
+.innersection2 {
+    padding: 10px;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    -webkit-column-rule: 3px solid #363636;
+    -moz-column-rule: 3px solid #363636;
+    column-rule: 3px solid #363636;
 
 }
-
+.innersection2 h1 {
+    margin: 5px 0;
+    font-size: 48px;
+    font-size: 5vw;
+}
+.veci_tekst {
+    font-size:1.3em;
+}
+#image_container {
+    text-align:center;
+    vertical-align: middle;
+}
+#imgLoR, #imgApex {
+    margin:30px 15px;
+    height:50px;
+}
+#imgKZ, #imgPF {
+    margin:5px 15px;
+    height:100px;
+}
                 /* CSS za Availability */
 
-#avail_wrapbig {
-    position:absolute;
-    top:50px;
-    bottom:50px;
-    left:0;
-    right:0;
-    overflow-y: auto;
-    min-height: 410px;
-    font-family:Arial;
-}
 #avail_text {
     min-height:410px;
     min-width:135px;
-    padding:5px;
+    padding:10px;
     float:left;
     margin-right:610px;
 }
@@ -190,15 +234,6 @@ footer {
 .displaynone {
     display:none;
 }
-#contact_wrapbig {
-    position:absolute;
-    top:50px;
-    bottom:50px;
-    left:0;
-    right:0;
-    overflow-y: auto;
-    font-family:Arial;
-}
 #contact_text {
     width:50%;
     float:left;
@@ -207,13 +242,35 @@ footer {
     width:50%;
     float:left;
 }
-.contact_innersections {
-    margin:10px;
-    overflow: hidden;
-}
 #contact_text a {
     color:#000;
 }
-#contact_text h1 {
+#contact_text h1, #avail_text h1 {
     margin-top:5px;
+}
+#contact_naslov {
+    margin:4px 0 5px 0;
+    font-size: 36px;
+    font-size: 5vw;
+}
+#contact_subtitle {
+    margin:5px 0 20px 0;
+    font-weight:normal;
+}
+.contact1 {
+    font-weight:normal;
+    margin-bottom: 0;
+}
+.contact2 {
+    margin-top: 0;
+    font-size: 32px;
+    font-size: 3vw;
+}
+.contact_btns {
+    float:left;
+    margin:5px 5px 0 0;
+}
+.contact_btns a {
+    text-decoration: none;
+    margin-right:5px;
 }

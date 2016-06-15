@@ -30,26 +30,63 @@ $sitepos="contact";
 <body id="body_avail">
 <nav><?php include('../views/toolbar.php');?></nav>
 
-<div id="contact_wrapbig">
-    <section id="contact_text">
-        <div class="contact_innersections">
-            <h1><?php echo lang('CONTACT_SENDMESSAGE')?></h1>
-            <p><?php echo lang('CONTACT_TEXT')?></p>
-            <fieldset id="contact_form">
-                <legend><?php echo lang('CONTACT_PLACEHOLDER') ?></legend>
-                <input type="text" id="contact_name" placeholder="<?php echo lang('AVAIL_NAME'); ?>" title="<?php echo lang('AVAIL_NAME'); ?>"/><br>
-                <input type="text" id="contact_email" placeholder="<?php echo lang('AVAIL_EMAIL'); ?>" title="<?php echo lang('AVAIL_EMAIL'); ?>"/><br>
-                <input type="text" id="contact_other" placeholder="<?php echo lang('AVAIL_OTHER'); ?>" title="<?php echo lang('AVAIL_OTHER'); ?>"/><br>
-                <textarea id="contact_message" placeholder="<?php echo lang('AVAIL_MESSAGE'); ?>" title="<?php echo lang('AVAIL_MESSAGE'); ?>" rows="4"></textarea><br>
-                <input id="contact_send" type="button" value="<?php echo lang('AVAIL_SEND'); ?>" onclick="sendContact()" />
-            </fieldset>
-        </div>
-    </section>
-    <section id="contact_info">
-        <div class="contact_innersections">
-            <a href="mailto:agxapetoxs@gmxail.com" onmouseover="this.href=this.href.replace(/x/g,'');" >agapetos@<span class="displaynone">null</span>gmail.com</a>
-        </div>
-    </section>
+<div id="wrapbig">
+    <div id="wrapsmall">
+        <section id="contact_text">
+            <div class="innersections">
+                <h1><?php echo lang('CONTACT_SENDMESSAGE')?></h1>
+                <p><?php echo lang('CONTACT_TEXT')?></p>
+                <fieldset id="contact_form">
+                    <legend><?php echo lang('CONTACT_PLACEHOLDER') ?></legend>
+                    <input type="text" id="contact_name" placeholder="<?php echo lang('AVAIL_NAME'); ?>" title="<?php echo lang('AVAIL_NAME'); ?>"/><br>
+                    <input type="text" id="contact_email" placeholder="<?php echo lang('AVAIL_EMAIL'); ?>" title="<?php echo lang('AVAIL_EMAIL'); ?>"/><br>
+                    <input type="text" id="contact_other" placeholder="<?php echo lang('AVAIL_OTHER'); ?>" title="<?php echo lang('AVAIL_OTHER'); ?>"/><br>
+                    <textarea id="contact_message" placeholder="<?php echo lang('AVAIL_MESSAGE'); ?>" title="<?php echo lang('AVAIL_MESSAGE'); ?>" rows="4"></textarea><br>
+                    <input id="contact_send" type="button" value="<?php echo lang('AVAIL_SEND'); ?>" onclick="sendContact()" />
+                </fieldset>
+            </div>
+        </section>
+        <section id="contact_info">
+            <div class="innersections">
+                <h1 id="contact_naslov"><?php echo lang('CONTACT_ME'); ?></h1>
+                <h3 id="contact_subtitle"><?php echo lang('INDEX3'); ?></h3>
+
+                <h2 class="contact1"><?php echo lang('CONTACT_PHONE'); ?></h2><h1 class="contact2"><?php echo lang('CONTACT_PHONENO'); ?></h1>
+                <h2 class="contact1"><?php echo lang('CONTACT_EMAIL'); ?></h2><h1 class="contact2"><a href="mailto:agxapetoxs@gmxail.com" onmouseover="this.href=this.href.replace(/x/g,'');" >agapetos@<span class="displaynone">null</span>gmail.com</a></h1>
+                <h2 class="contact1"><?php echo lang('CONTACT_SOCIAL'); ?></h2>
+                <div>
+                    <div class="contact_btns">
+                        <a href="https://rs.linkedin.com/in/david-šili-8407752b" target="_blank" title="linkedin">
+                            <img src="images/ico2_linkedin.gif" alt="linkedin" />
+                        </a>
+                        <a href="https://github.com/DavidSili" target="_blank" title="git hub">
+                            <img src="images/ico2_git.gif" alt="git hub" />
+                        </a>
+                        <a href="http://stackoverflow.com/users/988433/agapetos" target="_blank" title="stack overflow">
+                            <img src="images/ico2_stack.gif" alt="stack overflow" />
+                        </a>
+                        <a href="https://www.facebook.com/david.sili" target="_blank" title="facebook">
+                            <img src="images/ico2_face.gif" alt="facebook" />
+                        </a>
+                    </div>
+                    <div class="contact_btns">
+                        <a href="https://plus.google.com/u/0/117493549919110084778" target="_blank" title="google plus">
+                            <img src="images/ico2_google.gif" alt="google plus" />
+                        </a>
+                        <a href="https://twitter.com/david_sili" target="_blank" title="twitter">
+                            <img src="images/ico2_twit.gif" alt="twitter" />
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCvp2rL5lWOEcAqb5uSf-nOw" target="_blank" title="youtube">
+                            <img src="images/ico2_yt.gif" alt="youtube" />
+                        </a>
+                        <a href="viber://add?number=+38163540484" target="_blank" title="viber">
+                            <img src="images/ico2_viber.gif" alt="viber" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </div>
 
 <footer><?php include('../views/footer.php');?></footer>
