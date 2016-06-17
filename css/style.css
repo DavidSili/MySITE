@@ -204,6 +204,39 @@ footer {
     margin:5px 15px;
     height:100px;
 }
+
+                /* CSS za portfolio */
+
+.portfolio_container {
+    width:33.33%;
+    min-width:280px;
+    height:300px;
+    float:left;
+    display:block;
+    overflow:hidden;
+}
+.port_innerbox {
+    margin:2px;
+    padding:5px;
+    background:#fff;
+    overflow:hidden;
+    height:290px;
+}
+.port_innerbox h1 {
+    margin:0;
+}
+.port_innerbox img {
+    height:150px;
+    margin:0 3px 3px 0;
+    float:left;
+}
+.port_innerbox p {
+    text-overflow: ellipsis;
+    margin: 0;
+    height:263px;
+    width:100%;
+}
+
                 /* CSS za Availability */
 
 #avail_text {
