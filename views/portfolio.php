@@ -29,43 +29,21 @@ $sitepos="portfolio";
 </head>
 <body>
 <nav><?php include('../views/toolbar.php');?></nav>
-
+<?php include('../models/port_load_thumbs.php');?>
 <div id="wrapbig">
-    <section class="portfolio_container">
-        <div class="port_innerbox">
-            <h1>Rose Base 1.0</h1>
-            <img src="images/projects/RB03.jpg" alt="rose base" />
-            <p>Mini-ERP rešenje koje je namenjeno za mala do srednja preduzeća sa mogućnošću vođenja dve firme koje su poslovno vezane. Što više teksta stavljam, to više može da se kaže da radi. Mini-ERP rešenje koje je namenjeno za mala do srednja preduzeća sa mogućnošću vođenja dve firme koje su poslovno vezane. Što više teksta stavljam, to više može da se kaže da radi.</p>
-        </div>
-    </section>
-    <section class="portfolio_container">
-        <div class="port_innerbox">
-            <h1>Rose Base 1.0</h1>
-            <img src="images/projects/RB03.jpg" alt="rose base" />
-            <p>Mini-ERP rešenje koje je namenjeno za mala do srednja preduzeća sa mogućnošću vođenja dve firme koje su poslovno vezane. Što više teksta stavljam, to više može da se kaže da radi.</p>
-        </div>
-    </section>
-    <section class="portfolio_container">
-        <div class="port_innerbox">
-            <h1>Rose Base 1.0</h1>
-            <img src="images/projects/RB03.jpg" alt="rose base" />
-            <p>Mini-ERP rešenje koje je namenjeno za mala do srednja preduzeća sa mogućnošću vođenja dve firme koje su poslovno vezane. Što više teksta stavljam, to više može da se kaže da radi.</p>
-        </div>
-    </section>
-    <section class="portfolio_container">
-        <div class="port_innerbox">
-            <h1>Rose Base 1.0</h1>
-            <img src="images/projects/RB03.jpg" alt="rose base" />
-            <p>Mini-ERP rešenje koje je namenjeno za mala do srednja preduzeća sa mogućnošću vođenja dve firme koje su poslovno vezane. Što više teksta stavljam, to više može da se kaže da radi.</p>
-        </div>
-    </section>
-    <section class="portfolio_container">
-        <div class="port_innerbox">
-            <h1>Rose Base 1.0</h1>
-            <img src="images/projects/RB03.jpg" alt="rose base" />
-            <p>Mini-ERP rešenje koje je namenjeno za mala do srednja preduzeća sa mogućnošću vođenja dve firme koje su poslovno vezane. Što više teksta stavljam, to više može da se kaže da radi.</p>
-        </div>
-    </section>
+    <?php
+    while($row = $port_thumbs->fetch(PDO::FETCH_ASSOC)) {
+        echo '<section class="portfolio_container">
+            <div class="port_innerbox">
+                <h1>'.$row["name"].'</h1>
+                <img src="'.$row["thumbnail"].'" />
+                <div class="port_innerboxP">
+                    <p>'.$row["short"].'</p>
+                </div>
+            </div>
+        </section>';
+    }
+    ?>
 </div>
 
 <footer><?php include('../views/footer.php');?></footer>
