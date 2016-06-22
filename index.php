@@ -47,12 +47,12 @@ $sitepos="index";
         <section id="index_showcase">
             <div class="innersections">
                 <h1><?php echo lang('SAMPLE_PROJECTS');?></h1>
-                <div id="carousel" class="carousel-demo"></div>
+                <div class="carousel, carousel-demo"></div>
+                <script src="js/carouselsettings1.js"></script>
             </div>
-        </section>
+         </section>
     </div>
 </div>
 <footer><?php include('views/footer.php');?></footer>
-<script src="js/carouselsettings1.js"></script>
 </body>
 </html>

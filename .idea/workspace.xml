@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d0ce1a2-b25e-4801-b837-196363691c36" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/port_load_thumbs.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/carouselsettings2.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/port_load.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/sr.php" afterPath="$PROJECT_DIR$/languages/sr.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/port_load_thumbs.php" afterPath="$PROJECT_DIR$/models/port_load_thumbs.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/portfolio.php" afterPath="$PROJECT_DIR$/views/portfolio.php" />
     </list>
     <ignored path="MySITE.iws" />
@@ -31,11 +31,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sr.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sr.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/languages/sr.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41034484">
-              <caret line="39" column="148" selection-start-line="39" selection-start-column="148" selection-end-line="39" selection-end-column="148" />
+            <state vertical-scroll-proportion="-17.73077">
+              <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -44,42 +44,54 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.307693">
-              <caret line="221" column="14" selection-start-line="221" selection-start-column="14" selection-end-line="221" selection-end-column="14" />
+            <state vertical-scroll-proportion="-11.846154">
+              <caret line="293" column="14" selection-start-line="293" selection-start-column="14" selection-end-line="293" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="portfolio.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="portfolio.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/portfolio.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.846154">
-              <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.6189655">
+              <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
               <folding>
-                <marker date="1466337011116" expanded="true" signature="1143:1225" placeholder="..." />
-                <marker date="1466337011116" expanded="true" signature="1143:1253" placeholder="..." />
-                <marker date="1466337011116" expanded="true" signature="1143:1404" placeholder="..." />
-                <marker date="1466337011116" expanded="true" signature="1143:1428" placeholder="..." />
-                <marker date="1466337011116" expanded="true" signature="1143:1432" placeholder="..." />
-                <marker date="1466337011116" expanded="true" signature="1183:1205" placeholder="..." />
-                <marker date="1466337011116" expanded="true" signature="1183:1225" placeholder="..." />
-                <marker date="1466337011116" expanded="true" signature="1322:1346" placeholder="..." />
-                <marker date="1466337011116" expanded="true" signature="1322:1347" placeholder="..." />
-                <marker date="1466337011116" expanded="true" signature="1322:1390" placeholder="..." />
+                <marker date="1466623510159" expanded="true" signature="1167:1249" placeholder="..." />
+                <marker date="1466623510159" expanded="true" signature="1167:1277" placeholder="..." />
+                <marker date="1466623510159" expanded="true" signature="1167:1428" placeholder="..." />
+                <marker date="1466623510159" expanded="true" signature="1167:1452" placeholder="..." />
+                <marker date="1466623510159" expanded="true" signature="1167:1462" placeholder="..." />
+                <marker date="1466623510159" expanded="true" signature="1207:1229" placeholder="..." />
+                <marker date="1466623510159" expanded="true" signature="1207:1249" placeholder="..." />
+                <marker date="1466623510159" expanded="true" signature="1346:1370" placeholder="..." />
+                <marker date="1466623510159" expanded="true" signature="1346:1371" placeholder="..." />
+                <marker date="1466623510159" expanded="true" signature="1346:1414" placeholder="..." />
+                <marker date="1466623510159" expanded="true" signature="1892:2084" placeholder="..." />
+                <marker date="1466623510159" expanded="true" signature="3058:3306" placeholder="..." />
+                <marker date="1466623510159" expanded="true" signature="3078:3121" placeholder="{...}" />
+                <marker date="1466623510159" expanded="true" signature="3078:3166" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="port_load_thumbs.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/port_load_thumbs.php">
+      <file leaf-file-name="port_load.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/port_load.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.3076923">
-              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-              <folding>
-                <marker date="1466368320201" expanded="true" signature="135:200" placeholder="SELECT ID, n..portfolio..." />
-              </folding>
+            <state vertical-scroll-proportion="-3.9230769">
+              <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="carouselsettings1.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/carouselsettings1.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -109,12 +121,14 @@
         <option value="$PROJECT_DIR$/views/toolbar.php" />
         <option value="$PROJECT_DIR$/dbconnect.php" />
         <option value="$PROJECT_DIR$/config.php" />
-        <option value="$PROJECT_DIR$/views/portfolio.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/js/carouselsettings1.js" />
+        <option value="$PROJECT_DIR$/js/carouselsettings2.js" />
         <option value="$PROJECT_DIR$/models/port_load_thumbs.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/models/port_load.php" />
         <option value="$PROJECT_DIR$/languages/sr.php" />
+        <option value="$PROJECT_DIR$/views/portfolio.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -159,7 +173,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -222,6 +235,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -229,13 +243,14 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\MySITE\models" />
+      <recent name="C:\wamp64\www\MySITE\js" />
+      <recent name="C:\wamp64\www\MySITE\views" />
+      <recent name="C:\wamp64\www\MySITE\fonts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\MySITE" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\MySITE\views" />
-      <recent name="C:\wamp64\www\MySITE\js" />
-      <recent name="C:\wamp64\www\MySITE\fonts" />
     </key>
   </component>
   <component name="RunManager">
@@ -320,6 +335,104 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/languages/sr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="221" column="14" selection-start-line="221" selection-start-column="14" selection-end-line="221" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/portfolio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding>
+            <marker date="1466623510159" expanded="true" signature="1167:1249" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1167:1277" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1167:1428" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1167:1452" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1167:1462" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1207:1229" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1207:1249" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1346:1370" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1346:1371" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1346:1414" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1892:2084" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="3058:3306" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="3078:3121" placeholder="{...}" />
+            <marker date="1466623510159" expanded="true" signature="3078:3166" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/port_load_thumbs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+          <folding>
+            <marker date="1466615809298" expanded="true" signature="135:204" placeholder="SELECT ID, n..portfolio..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/languages/sr.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="221" column="14" selection-start-line="221" selection-start-column="14" selection-end-line="221" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/portfolio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+          <folding>
+            <marker date="1466623510159" expanded="true" signature="1167:1249" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1167:1277" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1167:1428" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1167:1452" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1167:1462" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1207:1229" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1207:1249" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1346:1370" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1346:1371" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1346:1414" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1892:2084" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="3058:3306" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="3078:3121" placeholder="{...}" />
+            <marker date="1466623510159" expanded="true" signature="3078:3166" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/port_load_thumbs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+          <folding>
+            <marker date="1466615809298" expanded="true" signature="135:204" placeholder="SELECT ID, n..portfolio..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/languages/sr.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -543,13 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/contact.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.65384614">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/availability.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.3076925">
@@ -571,72 +677,91 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5">
-          <caret line="49" column="57" selection-start-line="49" selection-start-column="57" selection-end-line="49" selection-end-column="57" />
-          <folding />
+        <state vertical-scroll-proportion="0.17586207">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/carouselsettings1.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19636963">
+        <state vertical-scroll-proportion="0.0">
           <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.php">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17586207">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+        <state vertical-scroll-proportion="0.6448276">
+          <caret line="34" column="7" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/portfolio.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.846154">
-          <caret line="41" column="22" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-          <folding>
-            <marker date="1466337011116" expanded="true" signature="1143:1225" placeholder="..." />
-            <marker date="1466337011116" expanded="true" signature="1143:1253" placeholder="..." />
-            <marker date="1466337011116" expanded="true" signature="1143:1404" placeholder="..." />
-            <marker date="1466337011116" expanded="true" signature="1143:1428" placeholder="..." />
-            <marker date="1466337011116" expanded="true" signature="1143:1432" placeholder="..." />
-            <marker date="1466337011116" expanded="true" signature="1183:1205" placeholder="..." />
-            <marker date="1466337011116" expanded="true" signature="1183:1225" placeholder="..." />
-            <marker date="1466337011116" expanded="true" signature="1322:1346" placeholder="..." />
-            <marker date="1466337011116" expanded="true" signature="1322:1347" placeholder="..." />
-            <marker date="1466337011116" expanded="true" signature="1322:1390" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/models/port_load_thumbs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3076923">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
           <folding>
-            <marker date="1466368320201" expanded="true" signature="135:200" placeholder="SELECT ID, n..portfolio..." />
+            <marker date="1466615809298" expanded="true" signature="135:204" placeholder="SELECT ID, n..portfolio..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
+    <entry file="file://$PROJECT_DIR$/models/port_load.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.307693">
-          <caret line="221" column="14" selection-start-line="221" selection-start-column="14" selection-end-line="221" selection-end-column="14" />
+        <state vertical-scroll-proportion="-3.9230769">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/contact.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17586207">
+          <caret line="62" column="75" selection-start-line="62" selection-start-column="75" selection-end-line="62" selection-end-column="75" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/languages/sr.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41034484">
-          <caret line="39" column="148" selection-start-line="39" selection-start-column="148" selection-end-line="39" selection-end-column="148" />
+        <state vertical-scroll-proportion="-17.73077">
+          <caret line="43" column="32" selection-start-line="43" selection-start-column="32" selection-end-line="43" selection-end-column="32" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.846154">
+          <caret line="293" column="14" selection-start-line="293" selection-start-column="14" selection-end-line="293" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/portfolio.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6189655">
+          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
+          <folding>
+            <marker date="1466623510159" expanded="true" signature="1167:1249" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1167:1277" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1167:1428" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1167:1452" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1167:1462" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1207:1229" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1207:1249" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1346:1370" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1346:1371" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1346:1414" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="1892:2084" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="3058:3306" placeholder="..." />
+            <marker date="1466623510159" expanded="true" signature="3078:3121" placeholder="{...}" />
+            <marker date="1466623510159" expanded="true" signature="3078:3166" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
