@@ -11,7 +11,9 @@ include('../config.php');
 include('../languages/'.$language.'.php');
 $sitepos="portfolio";
 ?>
-
+<script>
+    var language="<?php echo $language; ?>";
+</script>
 <!doctype html>
 <html lang="sr">
 <head>
@@ -42,48 +44,22 @@ $sitepos="portfolio";
                 </div>
             </div>
         </section>
-        <div id="ov'.$row["ID"].'" class="overlay">
-            <section class="ov_text">
-                <div class="ov_head">
-                    <img src="images/close.gif" onclick="close('.$row["ID"].')" />
-                    <h1>'.$row["name"].'</h1>
-                    <div class="ov_btnbox">';
-                        if (isset($row['github'])) echo '<a href="'.$row['github'].'" title="'.lang('OV_PROJGITHUB').'" target="_BLANK"><img src="images/ico2_git.gif" /></a>';
-                        if (isset($row['demo'])) echo '<a href="'.$row['demo'].'" target="_BLANK">'.lang('OV_PROJDEMO').'</a>';
-                    echo '</div>
-                </div>
-                <p>'.$row["longer"].'</p>
-            </section>
-            <section class="ov_show">';
-                if ($row['pictures'][0]=="{") {
-                echo '<div class="ov_carousel, carousel-demo'.$row["ID"].'"></div>
-                <script> var slides'.$row["ID"].' = ['.$row["pictures"].'];
-                $(\'.carousel-demo'.$row["ID"].'\').jR3DCarousel({
-                width : 1366,
-                height: 768,
-                slides: slides'.$row["ID"].',
-                animation: "slide3D",
-                animationCurve: \'ease-in-out\',
-                animationDuration: 700,
-                animationInterval: 4000,});</script>';
-                }
-                else {
-                    echo '<img class="ov_singleimage" src="'.$row['pictures'].'" />';
-                }
-            echo '</section>
+        <div id="overlay" class="overlay">
         </div>';
-    }
+   }
     ?>
 </div>
 <footer><?php include('../views/footer.php');?></footer>
 <script>
 function show(id) {
-    var krupno = document.getElementById("ov"+id);
+    var krupno = document.getElementById("overlay");
     krupno.style.display="block";
+    $.getJSON('models/port_large.php', {id: id, language: language}, function(data) {
+        $('#overlay').html(data.pass2html);
+    });
 }
-function close(id) {
-    alert ('kliknuto');
-    var krupno = document.getElementById("ov"+id);
+function closer() {
+    var krupno = document.getElementById("overlay");
     krupno.style.display="none";
 }
 </script>

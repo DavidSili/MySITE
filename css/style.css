@@ -220,7 +220,7 @@ footer {
 }
 .port_innerbox {
     margin:2px;
-    background:#f8f8f8;;
+    background:#f8f8f8;
     overflow:hidden;
     height:296px;
     text-align:center;
@@ -250,7 +250,6 @@ footer {
     right:20px;
     bottom:10px;
     left:20px;
-    z-index: 1;
     background:#f8f8f8;
     border-radius: 25px;
     border: 2px solid #cc3827;
