@@ -215,12 +215,16 @@ footer {
     display:block;
     overflow:hidden;
 }
-.portfolio_container :hover {
+.port_bcgn {
+    margin:2px;
+    overflow:hidden;
+    display:block;
+    background:#f8f8f8;
+}
+.port_bcgn:hover {
     background-color: #fff;
 }
 .port_innerbox {
-    margin:2px;
-    background:#f8f8f8;
     overflow:hidden;
     height:296px;
     text-align:center;
@@ -272,6 +276,9 @@ footer {
     height:40px;
     margin: 0px 10px 0 0;
     float:left;
+}
+.ov_closer {
+    cursor: pointer;
 }
 .ov_text h1 {
     margin:7px 0 0 0;

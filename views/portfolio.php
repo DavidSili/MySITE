@@ -36,11 +36,13 @@ $sitepos="portfolio";
     <?php
     while($row = $port_thumbs->fetch(PDO::FETCH_ASSOC)) {
         echo '<section class="portfolio_container" onclick="show('.$row["ID"].')">
-            <div class="port_innerbox">
-                <h1>'.$row["name"].'</h1>
-                <img src="'.$row["thumbnail"].'" />
-                <div class="port_innerboxP">
-                    <p>'.$row["short"].'</p>
+            <div class="port_bcgn">
+                <div class="port_innerbox">
+                    <h1>'.$row["name"].'</h1>
+                    <img src="'.$row["thumbnail"].'" />
+                    <div class="port_innerboxP">
+                        <p>'.$row["short"].'</p>
+                    </div>
                 </div>
             </div>
         </section>

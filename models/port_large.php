@@ -19,7 +19,7 @@ WHERE ID = "'.$id.'"');
 $row = $port_thumbs->fetch(PDO::FETCH_ASSOC);
 $send='<section class="ov_text">
             <div class="ov_head">
-                <img src="images/close.gif" onclick="closer()" />
+                <img class="ov_closer" src="images/close.gif" onclick="closer()" />
                  <h1>'.$row["name"].'</h1>
                 <div class="ov_btnbox">';
                     if (isset($row['github'])) $send.='<a href="'.$row['github'].'" title="'.lang('OV_PROJGITHUB').'" target="_BLANK"><img src="images/ico2_git.gif" /></a>';
