@@ -35,11 +35,12 @@ $sitepos="availability";
             <p><?php echo lang('AVAIL_TEXT')?></p>
             <fieldset id="avail_form">
                 <legend><?php echo lang('AVAIL_PLACEHOLDER') ?></legend>
-                <input type="text" id="avail_name" placeholder="<?php echo lang('AVAIL_NAME'); ?>" title="<?php echo lang('AVAIL_NAME'); ?>"/><br>
-                <input type="text" id="avail_email" placeholder="<?php echo lang('AVAIL_EMAIL'); ?>" title="<?php echo lang('AVAIL_EMAIL'); ?>"/><br>
+                <input type="text" id="avail_name" name="name" placeholder="<?php echo lang('AVAIL_NAME'); ?>" title="<?php echo lang('AVAIL_NAME'); ?>"/><br>
+                <input type="text" id="avail_email" name="email" placeholder="<?php echo lang('AVAIL_EMAIL'); ?>" title="<?php echo lang('AVAIL_EMAIL'); ?>"/><br>
                 <input type="text" id="avail_other" placeholder="<?php echo lang('AVAIL_OTHER'); ?>" title="<?php echo lang('AVAIL_OTHER'); ?>"/><br>
-                <input type="text" id="avail_when" placeholder="<?php echo lang('AVAIL_WHEN'); ?>" title="<?php echo lang('AVAIL_WHEN'); ?>"/><br>
-                <textarea id="avail_message" placeholder="<?php echo lang('AVAIL_MESSAGE'); ?>" title="<?php echo lang('AVAIL_MESSAGE'); ?>" rows="4"></textarea><br>
+                <input type="text" id="avail_url" name="url" placeholder="<?php echo lang('AVAIL_URL'); ?>" title="<?php echo lang('AVAIL_URL'); ?>"/>
+                <input type="text" id="avail_when" name="when" placeholder="<?php echo lang('AVAIL_WHEN'); ?>" title="<?php echo lang('AVAIL_WHEN'); ?>"/><br>
+                <textarea id="avail_message" name="message" placeholder="<?php echo lang('AVAIL_MESSAGE'); ?>" title="<?php echo lang('AVAIL_MESSAGE'); ?>" rows="4"></textarea><br>
                 <input id="avail_send" type="button" value="<?php echo lang('AVAIL_SEND'); ?>" onclick="sendAvail()" />
             </fieldset>
         </section>
@@ -50,5 +51,12 @@ $sitepos="availability";
 </div>
 
 <footer><?php include('../views/footer.php');?></footer>
+<script>
+    function sendAvail() {
+        $.getJSON('models/maila.php', {name: $('#avail_name').val(), email: $('#avail_email').val(), other: $('#avail_other').val(), url: $('#avail_url').val(), when: $('#avail_when').val(), message: $('#avail_message').val()}, function(data) {
+            alert(lang['MSG_SENT']);
+        });
+    }
+</script>
 </body>
 </html>

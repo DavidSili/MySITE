@@ -53,17 +53,21 @@ $sitepos="portfolio";
 </div>
 <footer><?php include('../views/footer.php');?></footer>
 <script>
+var krupno="";
 function show(id) {
-    var krupno = document.getElementById("overlay");
+    krupno = document.getElementById("overlay");
     krupno.style.display="block";
     $.getJSON('models/port_large.php', {id: id, language: language}, function(data) {
         $('#overlay').html(data.pass2html);
     });
 }
 function closer() {
-    var krupno = document.getElementById("overlay");
+    krupno = document.getElementById("overlay");
     krupno.style.display="none";
 }
+$(document).keyup(function(e) {
+    if (e.keyCode == 27 && krupno.style.display=="block") closer();
+    });
 </script>
 </body>
 </html>

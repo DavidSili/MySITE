@@ -38,10 +38,11 @@ $sitepos="contact";
                 <p><?php echo lang('CONTACT_TEXT')?></p>
                 <fieldset id="contact_form">
                     <legend><?php echo lang('CONTACT_PLACEHOLDER') ?></legend>
-                    <input type="text" id="contact_name" placeholder="<?php echo lang('AVAIL_NAME'); ?>" title="<?php echo lang('AVAIL_NAME'); ?>"/><br>
-                    <input type="text" id="contact_email" placeholder="<?php echo lang('AVAIL_EMAIL'); ?>" title="<?php echo lang('AVAIL_EMAIL'); ?>"/><br>
+                    <input type="text" id="contact_name" name="name" placeholder="<?php echo lang('AVAIL_NAME'); ?>" title="<?php echo lang('AVAIL_NAME'); ?>"/><br>
+                    <input type="text" id="contact_email" name="email" placeholder="<?php echo lang('AVAIL_EMAIL'); ?>" title="<?php echo lang('AVAIL_EMAIL'); ?>"/><br>
                     <input type="text" id="contact_other" placeholder="<?php echo lang('AVAIL_OTHER'); ?>" title="<?php echo lang('AVAIL_OTHER'); ?>"/><br>
-                    <textarea id="contact_message" placeholder="<?php echo lang('AVAIL_MESSAGE'); ?>" title="<?php echo lang('AVAIL_MESSAGE'); ?>" rows="4"></textarea><br>
+                    <input type="text" id="contact_url" name="url" placeholder="<?php echo lang('AVAIL_URL'); ?>" title="<?php echo lang('AVAIL_URL'); ?>"/>
+                    <textarea id="contact_message" name="message" placeholder="<?php echo lang('AVAIL_MESSAGE'); ?>" title="<?php echo lang('AVAIL_MESSAGE'); ?>" rows="4"></textarea><br>
                     <input id="contact_send" type="button" value="<?php echo lang('AVAIL_SEND'); ?>" onclick="sendContact()" />
                 </fieldset>
             </div>
@@ -90,6 +91,12 @@ $sitepos="contact";
 </div>
 
 <footer><?php include('../views/footer.php');?></footer>
-<script src="js/carouselsettings2.js"></script>
+<script>
+function sendContact() {
+    $.getJSON('models/mailc.php', {name: $('#contact_name').val(), email: $('#contact_email').val(), other: $('#contact_other').val(), url: $('#contact_url').val(), message: $('#contact_message').val()}, function(data) {
+        alert(lang['MSG_SENT']);
+    });
+}
+</script>
 </body>
 </html>
