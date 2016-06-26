@@ -2,30 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d0ce1a2-b25e-4801-b837-196363691c36" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/maila.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/models/mailc.php" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/projects/pophelper01.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/projects/pophelper02.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/projects/pophelper03.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/projects/pophelper04.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/projects/pophelper05.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/projects/pophelper06.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/projects/pophelper07.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/projects/pophelper08.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/projects/pophelper09.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/projects/pophelper10.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/projects/pophelper11.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/projects/pophelper12.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/images/projects/pophelper13.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/projects/RB01.jpg" afterPath="$PROJECT_DIR$/images/projects/RB01.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/images/projects/RB04.jpg" afterPath="$PROJECT_DIR$/images/projects/RB04.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/sr.php" afterPath="$PROJECT_DIR$/languages/sr.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/port_large.php" afterPath="$PROJECT_DIR$/models/port_large.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/availability.php" afterPath="$PROJECT_DIR$/views/availability.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/contact.php" afterPath="$PROJECT_DIR$/views/contact.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/portfolio.php" afterPath="$PROJECT_DIR$/views/portfolio.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/toolbar.php" afterPath="$PROJECT_DIR$/views/toolbar.php" />
     </list>
     <ignored path="MySITE.iws" />
@@ -111,8 +88,8 @@
       <file leaf-file-name="toolbar.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/toolbar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17586207">
-              <caret line="6" column="121" selection-start-line="6" selection-start-column="121" selection-end-line="6" selection-end-column="121" />
+            <state vertical-scroll-proportion="0.23448277">
+              <caret line="8" column="121" selection-start-line="8" selection-start-column="121" selection-end-line="8" selection-end-column="121" />
               <folding />
             </state>
           </provider>
@@ -322,7 +299,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13762811" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
@@ -766,8 +743,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/toolbar.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17586207">
-          <caret line="6" column="121" selection-start-line="6" selection-start-column="121" selection-end-line="6" selection-end-column="121" />
+        <state vertical-scroll-proportion="0.23448277">
+          <caret line="8" column="121" selection-start-line="8" selection-start-column="121" selection-end-line="8" selection-end-column="121" />
           <folding />
         </state>
       </provider>

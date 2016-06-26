@@ -7,4 +7,3 @@
 <!-- <a href="views/blog.php"<?php if($sitepos=='blog') echo ' class="a_selected"'; ?>><?php echo lang('BLOG');?></a> -->
 <a href="views/availability.php"<?php if($sitepos=='availability') echo ' class="a_selected"'; ?>><?php echo lang('AVAILABILITY');?></a>
 <a href="views/contact.php"<?php if($sitepos=='contact') echo ' class="a_selected"'; ?>><?php echo lang('CONTACT');?></a>
-</div>
