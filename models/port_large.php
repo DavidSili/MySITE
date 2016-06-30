@@ -1,7 +1,7 @@
 <?php
 $id = isset($_GET["id"]) ? $_GET["id"] : 0;
 $language = isset($_GET["language"]) ? $_GET["language"] : 0;
-include '../config.php';
+include('../../includes/mysite/config.php');
 include('../languages/'.$language.'.php');
 
 $db = new PDO('mysql:host='.$dbhost.';dbname='.$dbname.';charset=utf8mb4', $dbusername, $dbpassword);

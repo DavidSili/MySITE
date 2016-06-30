@@ -5,7 +5,7 @@ $other = isset($_GET["other"]) ? $_GET["other"] : 0;
 $url = isset($_GET["url"]) ? $_GET["url"] : 0;
 $message = isset($_GET["message"]) ? $_GET["message"] : 0;
 
-include '../config.php';
+include('../../includes/mysite/config.php');
 
 $content='Ime: '.$name.'\r\nE-mail'.$email.'\r\nOstale kontakt informacije:'.$other.'\r\nPoruka:\r\n'.$message;
 $headers='From: '.$name.' <'.$email.'>\r\n';

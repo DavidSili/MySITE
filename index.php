@@ -8,7 +8,7 @@ else {
      */
 }
 include('languages/'.$language.'.php');
-include('config.php');
+include('../includes/mysite/config.php');
 $sitepos="index";
 ?>
 
