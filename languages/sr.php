@@ -32,7 +32,7 @@ function lang($phrase){
         'MSG_SENT' => 'Poruka je poslata!',
         'CONTACT_ME' => 'Kontaktirajte me',
         'CONTACT_SENDMESSAGE' => 'Pošaljite mi poruku',
-        'CONTACT_TEXT' => 'Otvoren sam i za rad po ugovoru i po projektu tako da ako postoji bilo šta što vas interesuje ili vam treba pomoć, slobodno me kontaktirajte. Najbrže me možete dobiti preko mobilnog telefona, ali najsigurniji način je ako mi pošaljete e-mail ili iskoristite ovo polje za slanje poruke.</p><p>Takođe <a href="views/availability.php">ovde možete da pogledate i moju dostupnost</a>, ali nemojte dozvoliti da vas obeshrabri ako primetite da je kalendar ispunjen, uvek se spreman za razgovor i pronalaženje nekog rešenja koje će i vama i meni odgovarati.',
+        'CONTACT_TEXT' => 'Otvoren sam i za rad po ugovoru i po projektu tako da ako postoji bilo šta što vas interesuje ili vam treba pomoć, slobodno me kontaktirajte. Najbrže me možete dobiti preko mobilnog telefona, ali najsigurniji način je ako mi pošaljete e-mail ili iskoristite ovo polje za slanje poruke.</p><p>Takođe <a href="views/availability.php">ovde možete da pogledate i moju dostupnost</a>, ali nemojte dozvoliti da vas obeshrabri ako primetite da je kalendar ispunjen, uvek sam spreman za razgovor i pronalaženje nekog rešenja koje će i vama i meni odgovarati.',
         'CONTACT_PLACEHOLDER' => 'Direktni kontakt',
         'CONTACT_PHONE' => 'Telefon:',
         'CONTACT_PHONENO' => '063/540-484<br>060/8080-612',
