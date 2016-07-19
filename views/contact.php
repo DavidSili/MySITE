@@ -95,6 +95,10 @@ $sitepos="contact";
 function sendContact() {
     $.getJSON('models/mailc.php', {name: $('#contact_name').val(), email: $('#contact_email').val(), other: $('#contact_other').val(), url: $('#contact_url').val(), message: $('#contact_message').val()}, function(data) {
         alert(lang['MSG_SENT']);
+        $('#contact_ime').value="";
+        $('#contact_email').value="";
+        $('#contact_other').value="";
+        $('#contact_url').value="";
     });
 }
 </script>
