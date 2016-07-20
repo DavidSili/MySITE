@@ -24,6 +24,10 @@ $sitepos="about";
     <meta name="description" content="<?php echo lang('DESCRIPTION');?>">
     <meta name="author" content="<?php echo lang('AUTHOR');?>">
     <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' media='screen and (max-width: 700px)' href='css/stylea1.css' />
+    <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/stylea2.css' />
+    <link rel='stylesheet' media='screen and (max-width: 700px)' href='css/styletf1.css' />
+    <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/styletf2.css' />
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="js/jR3DCarousel.js"></script>
 </head>
@@ -35,6 +39,8 @@ $sitepos="about";
         <div class="innersection2">
             <h1><?php echo lang('ABOUT_ME'); ?></h1>
             <p class="veci_tekst"><?php echo lang('ABOUT_TEXT1'); ?></p>
+            <div id="mecarousel" class="carousel, carousel-demo"></div>
+            <script src="js/carouselsettings2.js"></script>
             <p><?php echo lang('ABOUT_TEXT2'); ?></p>
             <p class="veci_tekst"><?php echo lang('ABOUT_TEXT3'); ?></p>
             <div id="image_container">
@@ -48,6 +54,5 @@ $sitepos="about";
 </div>
 
 <footer><?php include('../views/footer.php');?></footer>
-<script src="js/carouselsettings2.js"></script>
 </body>
 </html>

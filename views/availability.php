@@ -24,6 +24,10 @@ $sitepos="availability";
     <meta name="description" content="<?php echo lang('DESCRIPTION');?>">
     <meta name="author" content="<?php echo lang('AUTHOR');?>">
     <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' media='screen and (max-width: 900px)' href='css/styleav1.css' />
+    <link rel='stylesheet' media='screen and (min-width: 901px)' href='css/styleav2.css' />
+    <link rel='stylesheet' media='screen and (max-width: 700px)' href='css/styletf1.css' />
+    <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/styletf2.css' />
 </head>
 <body id="body_avail">
 <nav><?php include('../views/toolbar.php');?></nav>
@@ -56,6 +60,13 @@ $sitepos="availability";
         $.getJSON('models/maila.php', {name: $('#avail_name').val(), email: $('#avail_email').val(), other: $('#avail_other').val(), url: $('#avail_url').val(), when: $('#avail_when').val(), message: $('#avail_message').val()}, function(data) {
             alert(lang['MSG_SENT']);
         });
+        $('#avail_name').val("");
+        $('#avail_email').val("");
+        $('#avail_other').val("");
+        $('#avail_url').val("");
+        $('#avail_when').val("");
+        $('#avail_message').val("");
+        alert('<?php echo lang('MSG_SENT')?>');
     }
 </script>
 </body>

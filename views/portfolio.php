@@ -26,6 +26,13 @@ $sitepos="portfolio";
     <meta name="description" content="<?php echo lang('DESCRIPTION');?>">
     <meta name="author" content="<?php echo lang('AUTHOR');?>">
     <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' media='screen and (max-width: 600px)' href='css/stylep1.css' />
+    <link rel='stylesheet' media='screen and (min-width: 601px) and (max-width: 900px)' href='css/stylep2.css' />
+    <link rel='stylesheet' media='screen and (min-width: 901px) and (max-width: 1200px)' href='css/stylep3.css' />
+    <link rel='stylesheet' media='screen and (min-width: 1201px) and (max-width: 1500px)' href='css/stylep4.css' />
+    <link rel='stylesheet' media='screen and (min-width: 1501px)' href='css/stylep5.css' />
+    <link rel='stylesheet' media='screen and (max-width: 700px)' href='css/styletf1.css' />
+    <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/styletf2.css' />
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="js/jR3DCarousel.js"></script>
 </head>

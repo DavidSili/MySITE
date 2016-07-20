@@ -1,0 +1,20 @@
+                 /* CSS za index */
+
+#index_wrap, #index_showcase {
+    color: #000;
+    font-family: Arial;
+}
+#index_wrap {
+    width:100%;
+}
+#index_showcase {
+    width:100%;
+}
+#index_zanimanje {
+    font-size: 28pt;
+    font-size: 8vw;
+    font-family: inconsolata;
+    font-style: italic;
+    font-weight: bold;
+    margin-bottom: 5px;
+}

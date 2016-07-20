@@ -1,0 +1,8 @@
+.portfolio_container {
+    width:100%;
+    min-width:280px;
+    max-height:300px;
+    float:left;
+    display:block;
+    overflow:hidden;
+}

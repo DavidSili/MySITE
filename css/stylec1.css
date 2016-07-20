@@ -1,0 +1,18 @@
+/* CSS za contact */
+
+#contact_text {
+    width:100%;
+}
+#contact_info {
+    width:100%;
+}
+#contact_naslov {
+    margin:4px 0 5px 0;
+    font-size: 36px;
+    font-size: 7vw;
+}
+.contact2 {
+    margin-top: 0;
+    font-size: 32px;
+    font-size: 5vw;
+}

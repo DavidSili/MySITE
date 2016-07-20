@@ -1,0 +1,14 @@
+/* CSS za Availability */
+
+#avail_text {
+    min-height:410px;
+    min-width:135px;
+    padding:10px;
+    float:left;
+    margin-right:610px;
+}
+#avail_calendar {
+    position:absolute;
+    top:5px;
+    right:5px;
+}

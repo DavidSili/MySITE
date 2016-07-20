@@ -29,7 +29,7 @@ function lang($phrase){
         'AVAIL_WHEN' => 'Za kada vam je potrebna pomoć',
         'AVAIL_MESSAGE' => 'Poruka...',
         'AVAIL_SEND' => 'Pošalji poruku',
-        'MSG_SENT' => 'Poruka je poslata!',
+        'MSG_SENT' => 'Poruka je poslata. Prvom mogućom prilikom ću vas kontaktirati.',
         'CONTACT_ME' => 'Kontaktirajte me',
         'CONTACT_SENDMESSAGE' => 'Pošaljite mi poruku',
         'CONTACT_TEXT' => 'Otvoren sam i za rad po ugovoru i po projektu tako da ako postoji bilo šta što vas interesuje ili vam treba pomoć, slobodno me kontaktirajte. Najbrže me možete dobiti preko mobilnog telefona, ali najsigurniji način je ako mi pošaljete e-mail ili iskoristite ovo polje za slanje poruke.</p><p>Takođe <a href="views/availability.php">ovde možete da pogledate i moju dostupnost</a>, ali nemojte dozvoliti da vas obeshrabri ako primetite da je kalendar ispunjen, uvek sam spreman za razgovor i pronalaženje nekog rešenja koje će i vama i meni odgovarati.',

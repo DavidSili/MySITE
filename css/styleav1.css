@@ -1,0 +1,11 @@
+/* CSS za Availability */
+
+#avail_text {
+    width:100%px;
+    padding:10px;
+}
+#avail_calendar {
+    text-align:center;
+    width:100%;
+    margin:5px 0;
+}

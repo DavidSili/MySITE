@@ -24,6 +24,10 @@ $sitepos="contact";
     <meta name="description" content="<?php echo lang('DESCRIPTION');?>">
     <meta name="author" content="<?php echo lang('AUTHOR');?>">
     <link rel="stylesheet" href="css/style.css">
+    <link rel='stylesheet' media='screen and (max-width: 700px)' href='css/stylec1.css' />
+    <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/stylec2.css' />
+    <link rel='stylesheet' media='screen and (max-width: 700px)' href='css/styletf1.css' />
+    <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/styletf2.css' />
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="js/jR3DCarousel.js"></script>
 </head>
@@ -92,14 +96,16 @@ $sitepos="contact";
 
 <footer><?php include('../views/footer.php');?></footer>
 <script>
+var msg = lang['MSG_SENT'];
 function sendContact() {
     $.getJSON('models/mailc.php', {name: $('#contact_name').val(), email: $('#contact_email').val(), other: $('#contact_other').val(), url: $('#contact_url').val(), message: $('#contact_message').val()}, function(data) {
-        alert(lang['MSG_SENT']);
-        $('#contact_ime').value="";
-        $('#contact_email').value="";
-        $('#contact_other').value="";
-        $('#contact_url').value="";
     });
+    $('#contact_name').val("");
+    $('#contact_email').val("");
+    $('#contact_other').val("");
+    $('#contact_url').val("");
+    $('#contact_message').val("");
+    alert('<?php echo lang('MSG_SENT')?>');
 }
 </script>
 </body>
