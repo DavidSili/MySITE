@@ -53,30 +53,6 @@ nav {
     background-color: #363636;
     overflow: hidden;
 }
-#title {
-    color: #f8f8f8;
-    text-decoration: none;
-    font-style: italic;
-    font-family: inconsolata;
-    font-size: 16pt;
-}
-#title_div {
-    display: block;
-    float: left;
-    margin: 12px 50px 0 10px;
-    height: 33px
-}
-nav > a {
-    color: #f8f8f8;
-    text-decoration: none;
-    float: left;
-    vertical-align: middle;
-    font-family: inconsolata;
-    display: block;
-    padding: 14px 10px 15px 10px;
-    font-size:14pt;
-    margin-top:0;
-}
 nav > a:hover, .a_selected {
     text-decoration: underline;
 }
@@ -120,10 +96,6 @@ footer {
     display: block;
     height: 40px;
     margin-top:10px;
-}
-#social_btns a {
-    text-decoration: none;
-    margin: 0px 20px 0 0;
 }
 #social_btns img {
     height: 30px;
@@ -219,17 +191,6 @@ footer {
     padding: 20px;
     display: none;
 }
-.ov_textbox {
-    min-width:200px;
-    float:left;
-    width:30%;
-    overflow:hidden;
-    height:100%;
-}
-.ov_text {
-    overflow-y:auto;
-    height:100%;
-}
 .ov_head {
     overflow:hidden;
     vertical-align: middle;
@@ -252,12 +213,6 @@ footer {
     font-size:16pt;
     font-weight: bold;
     margin-right:5px;
-}
-.ov_show {
-    float:right;
-    width:70%;
-    height:100%;
-    overflow:hidden;
 }
 .ov_carousel {
     width:70%;

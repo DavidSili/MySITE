@@ -23,6 +23,7 @@ $sitepos="blog";
           href="images/favicon.gif">
     <meta name="description" content="<?php echo lang('DESCRIPTION');?>">
     <meta name="author" content="<?php echo lang('AUTHOR');?>">
+    <meta name=viewport content='width=540'>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="js/jR3DCarousel.js"></script>

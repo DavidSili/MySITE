@@ -23,6 +23,7 @@ $sitepos="availability";
           href="images/favicon.gif">
     <meta name="description" content="<?php echo lang('DESCRIPTION');?>">
     <meta name="author" content="<?php echo lang('AUTHOR');?>">
+    <meta name=viewport content='width=540'>
     <link rel="stylesheet" href="css/style.css">
     <link rel='stylesheet' media='screen and (max-width: 900px)' href='css/styleav1.css' />
     <link rel='stylesheet' media='screen and (min-width: 901px)' href='css/styleav2.css' />
@@ -39,11 +40,11 @@ $sitepos="availability";
             <p><?php echo lang('AVAIL_TEXT')?></p>
             <fieldset id="avail_form">
                 <legend><?php echo lang('AVAIL_PLACEHOLDER') ?></legend>
-                <input type="text" id="avail_name" name="name" placeholder="<?php echo lang('AVAIL_NAME'); ?>" title="<?php echo lang('AVAIL_NAME'); ?>"/><br>
-                <input type="text" id="avail_email" name="email" placeholder="<?php echo lang('AVAIL_EMAIL'); ?>" title="<?php echo lang('AVAIL_EMAIL'); ?>"/><br>
-                <input type="text" id="avail_other" placeholder="<?php echo lang('AVAIL_OTHER'); ?>" title="<?php echo lang('AVAIL_OTHER'); ?>"/><br>
+                <input type="text" id="avail_name" name="name" autocorrect="off" autocapitalize="words" placeholder="<?php echo lang('AVAIL_NAME'); ?>" title="<?php echo lang('AVAIL_NAME'); ?>"/><br>
+                <input type="text" id="avail_email" name="email" autocorrect="off" placeholder="<?php echo lang('AVAIL_EMAIL'); ?>" title="<?php echo lang('AVAIL_EMAIL'); ?>"/><br>
+                <input type="text" id="avail_other" autocorrect="off" placeholder="<?php echo lang('AVAIL_OTHER'); ?>" title="<?php echo lang('AVAIL_OTHER'); ?>"/><br>
                 <input type="text" id="avail_url" name="url" placeholder="<?php echo lang('AVAIL_URL'); ?>" title="<?php echo lang('AVAIL_URL'); ?>"/>
-                <input type="text" id="avail_when" name="when" placeholder="<?php echo lang('AVAIL_WHEN'); ?>" title="<?php echo lang('AVAIL_WHEN'); ?>"/><br>
+                <input type="text" id="avail_when" autocorrect="off" name="when" placeholder="<?php echo lang('AVAIL_WHEN'); ?>" title="<?php echo lang('AVAIL_WHEN'); ?>"/><br>
                 <textarea id="avail_message" name="message" placeholder="<?php echo lang('AVAIL_MESSAGE'); ?>" title="<?php echo lang('AVAIL_MESSAGE'); ?>" rows="4"></textarea><br>
                 <input id="avail_send" type="button" value="<?php echo lang('AVAIL_SEND'); ?>" onclick="sendAvail()" />
             </fieldset>

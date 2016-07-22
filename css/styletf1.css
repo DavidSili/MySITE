@@ -1,14 +1,5 @@
                 /* CSS za toolbar */
 
-nav {
-    position:absolute;
-    top:0;
-    height: 30px;
-    width: 100%;
-    padding: 0;
-    background-color: #363636;
-    overflow: hidden;
-}
 #title {
     color: #f8f8f8;
     text-decoration: none;
@@ -19,8 +10,8 @@ nav {
 #title_div {
     display: block;
     float: left;
-    margin: 6px 20px 0 5px;
-    height: 18px
+    margin: 17px 20px 0 10px;
+    height: 33px
 }
 nav > a {
     color: #f8f8f8;
@@ -29,62 +20,13 @@ nav > a {
     vertical-align: middle;
     font-family: inconsolata;
     display: block;
-    padding: 6px 5px 5px 5px;
+    padding: 17px 5px 15px 5px;
     font-size:12pt;
     margin-top:0;
 }
-nav > a:hover, .a_selected {
-    text-decoration: underline;
-}
-nav > a:active {
-    text-decoration: underline;
-}
-blink, .blink {
-    -webkit-animation: blink 1s step-end infinite;
-    -moz-animation: blink 1s step-end infinite;
-    -o-animation: blink 1s step-end infinite;
-    animation: blink 1s step-end infinite;
-}
-
-@-webkit-keyframes blink {
-    67% { opacity: 0 }
-}
-
-@-moz-keyframes blink {
-    67% { opacity: 0 }
-}
-
-@-o-keyframes blink {
-    67% { opacity: 0 }
-}
-
-@keyframes blink {
-    67% { opacity: 0 }
-}
                 /* CSS za footer */
 
-footer {
-    position:absolute;
-    bottom:0;
-    width:100%;
-    height: 30px;
-    padding: 0;
-    background-color: #363636;
-}
-#social_btns {
-    text-align: center;
-    display: block;
-    height: 20px;
-    margin-top: 5px;
-}
 #social_btns a {
     text-decoration: none;
-    margin: 0px 5px 0 0;
-}
-#social_btns img {
-    height: 20px;
-}
-#wrapbig {
-    top: 30px !important;
-    bottom: 30px !important;
+    margin: 0px 10px 0 0;
 }

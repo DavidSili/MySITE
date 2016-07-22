@@ -23,6 +23,7 @@ $sitepos="contact";
           href="images/favicon.gif">
     <meta name="description" content="<?php echo lang('DESCRIPTION');?>">
     <meta name="author" content="<?php echo lang('AUTHOR');?>">
+    <meta name=viewport content='width=540'>
     <link rel="stylesheet" href="css/style.css">
     <link rel='stylesheet' media='screen and (max-width: 700px)' href='css/stylec1.css' />
     <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/stylec2.css' />
@@ -42,9 +43,9 @@ $sitepos="contact";
                 <p><?php echo lang('CONTACT_TEXT')?></p>
                 <fieldset id="contact_form">
                     <legend><?php echo lang('CONTACT_PLACEHOLDER') ?></legend>
-                    <input type="text" id="contact_name" name="name" placeholder="<?php echo lang('AVAIL_NAME'); ?>" title="<?php echo lang('AVAIL_NAME'); ?>"/><br>
-                    <input type="text" id="contact_email" name="email" placeholder="<?php echo lang('AVAIL_EMAIL'); ?>" title="<?php echo lang('AVAIL_EMAIL'); ?>"/><br>
-                    <input type="text" id="contact_other" placeholder="<?php echo lang('AVAIL_OTHER'); ?>" title="<?php echo lang('AVAIL_OTHER'); ?>"/><br>
+                    <input type="text" id="contact_name" name="name" autocorrect="off" autocapitalize="words" placeholder="<?php echo lang('AVAIL_NAME'); ?>" title="<?php echo lang('AVAIL_NAME'); ?>"/><br>
+                    <input type="text" id="contact_email" name="email" autocorrect="off" placeholder="<?php echo lang('AVAIL_EMAIL'); ?>" title="<?php echo lang('AVAIL_EMAIL'); ?>"/><br>
+                    <input type="text" id="contact_other" autocorrect="off" placeholder="<?php echo lang('AVAIL_OTHER'); ?>" title="<?php echo lang('AVAIL_OTHER'); ?>"/><br>
                     <input type="text" id="contact_url" name="url" placeholder="<?php echo lang('AVAIL_URL'); ?>" title="<?php echo lang('AVAIL_URL'); ?>"/>
                     <textarea id="contact_message" name="message" placeholder="<?php echo lang('AVAIL_MESSAGE'); ?>" title="<?php echo lang('AVAIL_MESSAGE'); ?>" rows="4"></textarea><br>
                     <input id="contact_send" type="button" value="<?php echo lang('AVAIL_SEND'); ?>" onclick="sendContact()" />

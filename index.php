@@ -22,6 +22,7 @@ $sitepos="index";
           href="images/favicon.gif">
     <meta name="description" content="<?php echo lang('DESCRIPTION');?>">
     <meta name="author" content="<?php echo lang('AUTHOR');?>">
+    <meta name=viewport content='width=540'>
     <?php echo $base; ?>
     <link rel="stylesheet" href="css/style.css">
     <link rel='stylesheet' media='screen and (max-width: 700px)' href='css/stylei1.css' />
