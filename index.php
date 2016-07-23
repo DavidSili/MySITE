@@ -7,8 +7,8 @@ else {
      * Kako budem dodavao prevode tako ću i ovde da dodam jezike. Kasnije će default biti 'en'
      */
 }
-include('languages/'.$language.'.php');
 include('../includes/mysite/config.php');
+include('languages/'.$language.'.php');
 $sitepos="index";
 ?>
 
