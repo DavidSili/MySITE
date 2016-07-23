@@ -31,7 +31,7 @@ $sitepos="availability";
     <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/styletf2.css' />
 </head>
 <body id="body_avail">
-<nav><?php include('../views/toolbar.php');?></nav>
+<nav><?php include('toolbar.php');?></nav>
 
 <div id="wrapbig">
     <div id="wrapsmall">
@@ -55,7 +55,7 @@ $sitepos="availability";
     </div>
 </div>
 
-<footer><?php include('../views/footer.php');?></footer>
+<footer><?php include('footer.php');?></footer>
 <script>
     function sendAvail() {
         $.getJSON('models/maila.php', {name: $('#avail_name').val(), email: $('#avail_email').val(), other: $('#avail_other').val(), url: $('#avail_url').val(), when: $('#avail_when').val(), message: $('#avail_message').val()}, function(data) {

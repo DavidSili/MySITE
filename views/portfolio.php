@@ -40,7 +40,7 @@ $sitepos="portfolio";
     <script src="js/jR3DCarousel.js"></script>
 </head>
 <body>
-<nav><?php include('../views/toolbar.php');?></nav>
+<nav><?php include('toolbar.php');?></nav>
 <?php include('../models/port_load.php');?>
 <div id="wrapbig">
     <?php
@@ -61,7 +61,7 @@ $sitepos="portfolio";
    }
     ?>
 </div>
-<footer><?php include('../views/footer.php');?></footer>
+<footer><?php include('footer.php');?></footer>
 <script>
 var krupno="";
 function show(id) {

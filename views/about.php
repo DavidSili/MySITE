@@ -33,7 +33,7 @@ $sitepos="about";
     <script src="js/jR3DCarousel.js"></script>
 </head>
 <body>
-<nav><?php include('../views/toolbar.php');?></nav>
+<nav><?php include('toolbar.php');?></nav>
 
 <div id="wrapbig">
     <div id="wrapsmall">
@@ -54,6 +54,6 @@ $sitepos="about";
     </div>
 </div>
 
-<footer><?php include('../views/footer.php');?></footer>
+<footer><?php include('footer.php');?></footer>
 </body>
 </html>

@@ -33,7 +33,7 @@ $sitepos="contact";
     <script src="js/jR3DCarousel.js"></script>
 </head>
 <body id="body_avail">
-<nav><?php include('../views/toolbar.php');?></nav>
+<nav><?php include('toolbar.php');?></nav>
 
 <div id="wrapbig">
     <div id="wrapsmall">
@@ -95,7 +95,7 @@ $sitepos="contact";
     </div>
 </div>
 
-<footer><?php include('../views/footer.php');?></footer>
+<footer><?php include('footer.php');?></footer>
 <script>
 var msg = lang['MSG_SENT'];
 function sendContact() {

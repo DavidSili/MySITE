@@ -7,8 +7,8 @@ else {
      * Kako budem dodavao prevode tako ću i ovde da dodam jezike. Kasnije će default biti 'en'
      */
 }
-include('../includes/mysite/config.php');
-include('languages/'.$language.'.php');
+include('../../includes/mysite/config.php');
+include('../languages/'.$language.'.php');
 $sitepos="index";
 ?>
 
@@ -33,7 +33,7 @@ $sitepos="index";
     <script src="js/jR3DCarousel.js"></script>
 </head>
 <body id="body_index">
-<nav><?php include('views/toolbar.php');?></nav>
+<nav><?php include('toolbar.php');?></nav>
 
 <div id="wrapbig">
     <div id="wrapsmall">
@@ -41,7 +41,7 @@ $sitepos="index";
             <div class="innersections">
                 <div id="index_zanimanje"><?php echo lang('INDEX1');?></div>
                 <div id="index_znanja"><?php echo lang('INDEX2');?></div>
-                <h1><a href="views/availability.php" alt="<?php echo lang('AVAILABILITY');?>"><?php echo lang('AVAILABILITY');?></a></h1>
+                <h1><a href="availability.php" alt="<?php echo lang('AVAILABILITY');?>"><?php echo lang('AVAILABILITY');?></a></h1>
                 <p><?php echo lang('INDEX3');?></p>
                 <h1><?php echo lang('INDEX4');?></h1>
                 <p><?php echo lang('INDEX5');?></p>
@@ -58,6 +58,6 @@ $sitepos="index";
          </section>
     </div>
 </div>
-<footer><?php include('views/footer.php');?></footer>
+<footer><?php include('footer.php');?></footer>
 </body>
 </html>
