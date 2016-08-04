@@ -7,6 +7,8 @@ else {
      * Kako budem dodavao prevode tako ću i ovde da dodam jezike. Kasnije će default biti 'en'
      */
 }
+$article= isset($_GET['article']) ? $_GET['article'] : "";
+
 include('../../includes/mysite/config.php');
 include('../languages/'.$language.'.php');
 $sitepos="blog";
@@ -25,18 +27,89 @@ $sitepos="blog";
     <meta name="author" content="<?php echo lang('AUTHOR');?>">
     <meta name=viewport content='width=540'>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-3.0.0.min.js"></script>
-    <script src="js/jR3DCarousel.js"></script>
+    <link rel='stylesheet' media='screen and (max-width: 700px)' href='css/stylea1.css' />
+    <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/stylea2.css' />
+    <link rel='stylesheet' media='screen and (max-width: 700px)' href='css/styletf1.css' />
+    <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/styletf2.css' />
 </head>
 <body>
-<nav><?php include('../views/toolbar.php');?></nav>
+<nav><?php include('toolbar.php');?></nav>
 
-<div id="about_wrapbig">
-    <section id="about_wrap">
-    </section>
+<div id="wrapbig">
+    <div id="wrapsmall">
+        <div id="articlearea">
+<?php
+$db = new PDO('mysql:host='.$dbhost.';dbname='.$dbname.';charset=utf8mb4', $dbusername, $dbpassword);
+
+if (isset($_GET['article'])) {
+    $stmt = $db->prepare('SELECT
+      ID,
+      title_'.$language.' title,
+      text_'.$language.' text,
+      time,
+      tags
+    FROM
+      blog
+    WHERE ID = ?');
+    if ($stmt->execute(array($article))) $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $sortedtime=date('G:i d.m.Y.',strtotime($row['time']));
+
+    /* kada završim ovo što radim, srediću i tagove da mogu da se pozivaju
+    na osnovu tagova i datuma
+    $presortedtags=explode(',',$row['tags']);
+    */
+
+    ?>
+
+    <!-- Ukoliko je pojedinačni članak -->
+
+        <article>
+            <h1><?php echo $row['title'];?></h1>
+            <section class="text"><?php echo $row['text'];?></section>
+            <div class="time"><?php echo $sortedtime;?></div>
+            <section class="share"></section>
+            <section class="tags"><?php echo $row['tags'];?></section>
+            <section class="disqus"></section>
+        </article>
+
+<?php } else {
+    $stmt = $db->query('SELECT
+      ID,
+      title_'.$language.' title,
+      text_'.$language.' text,
+      time,
+      tags
+    FROM
+      blog
+    LIMIT 3');
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
+    $sortedtime=date('G:i d.m.Y.',strtotime($row['time']));
+
+    ?>
+
+    <!-- Ukoliko je početna strana bloga -->
+            <article>
+                <h1><?php echo $row['title'];?></h1>
+                <section class="text"><?php echo $row['text'];?></section>
+                <div class="time"><?php echo $sortedtime;?></div>
+                <section class="share"></section>
+                <section class="tags"><?php echo $row['tags'];?></section>
+                <section class="disqus"></section>
+            </article>
+
+<?php }} ?>
+        </div>
+        <div id="articlebar">
+
+            <!-- Ovde će ići tagovi, biranje na osnovu godine i biranje pojedinačnih nedavnih članaka -->
+
+        </div>
+    </div>
+
 </div>
 
-<footer><?php include('../views/footer.php');?></footer>
-<script src="js/carouselsettings2.js"></script>
+<footer><?php include('footer.php');?></footer>
 </body>
 </html>

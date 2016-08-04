@@ -5,7 +5,7 @@ include('../../includes/mysite/config.php');
 include('../languages/'.$language.'.php');
 
 $db = new PDO('mysql:host='.$dbhost.';dbname='.$dbname.';charset=utf8mb4', $dbusername, $dbpassword);
-$port_thumbs = $db->query('SELECT
+$port_thumbs = $db->prepare('SELECT
   ID,
   name,
   pictures,
@@ -14,9 +14,9 @@ $port_thumbs = $db->query('SELECT
   demo
 FROM
   portfolio
-WHERE ID = "'.$id.'"');
+WHERE ID = ?');
 
-$row = $port_thumbs->fetch(PDO::FETCH_ASSOC);
+if ($port_thumbs->execute(array($id))) $row = $port_thumbs->fetch(PDO::FETCH_ASSOC);
 $send='<section class="ov_textbox">
             <div class="ov_head">
                 <img class="ov_closer" src="images/close.gif" onclick="closer()" />

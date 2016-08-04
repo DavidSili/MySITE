@@ -225,6 +225,58 @@ footer {
 .ov_text p, .ov_text ul {
     padding-right:5px;
 }
+                /* CSS za Blog */
+
+#articlearea {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:200px;
+    background:#f8f8f8;
+    overflow-y:auto;
+}
+#articlebar {
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    width:200px;
+    background:#363636;
+    color:#f8f8f8;
+}
+article {
+    background:#d6d6d6;
+    padding:10px;
+    margin-bottom:10px;
+}
+article h1 {
+    margin:0 0 10px 0;
+}
+article .time {
+    text-align: right;
+}
+article .text {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    -webkit-column-rule: 3px solid #363636;
+    -moz-column-rule: 3px solid #363636;
+    column-rule: 3px solid #363636;
+}
+article .tags {
+    color: #363636;
+}
+article .share {
+
+}
+article .disqus {
+
+}
+
                 /* CSS za Availability */
 
 #avail_form input, #avail_form textarea, #contact_form input, #contact_form textarea {
@@ -238,7 +290,7 @@ footer {
     height:25px;
     margin-bottom:0;
 }
-                /* CSS za contact */
+                /* CSS za Contact */
 
 .displaynone {
     display:none;
