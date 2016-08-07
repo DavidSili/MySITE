@@ -8,6 +8,9 @@ else {
      */
 }
 $article= isset($_GET['article']) ? $_GET['article'] : "";
+$tag= isset($_GET['tag']) ? $_GET['tag'] : "";
+$year= isset($_GET['year']) ? $_GET['year'] : "";
+$page= isset($_GET['page']) ? $_GET['page'] : "";
 
 include('../../includes/mysite/config.php');
 include('../languages/'.$language.'.php');
@@ -39,26 +42,14 @@ $sitepos="blog";
     <div id="wrapsmall">
         <div id="articlearea">
 <?php
+
 $db = new PDO('mysql:host='.$dbhost.';dbname='.$dbname.';charset=utf8mb4', $dbusername, $dbpassword);
 
 if (isset($_GET['article'])) {
-    $stmt = $db->prepare('SELECT
-      ID,
-      title_'.$language.' title,
-      text_'.$language.' text,
-      time,
-      tags
-    FROM
-      blog
-    WHERE ID = ?');
-    if ($stmt->execute(array($article))) $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    $sortedtime=date('G:i d.m.Y.',strtotime($row['time']));
-
-    /* kada završim ovo što radim, srediću i tagove da mogu da se pozivaju
-    na osnovu tagova i datuma
-    $presortedtags=explode(',',$row['tags']);
-    */
+    include "..\\models\\article_load.php";
+    $loader = new loadArticle($language,$db);
+    $row=$loader->get_article($article);
+    $sortedTime=$loader->sortTime();
 
     ?>
 
@@ -67,33 +58,26 @@ if (isset($_GET['article'])) {
         <article>
             <h1><?php echo $row['title'];?></h1>
             <section class="text"><?php echo $row['text'];?></section>
-            <div class="time"><?php echo $sortedtime;?></div>
+            <div class="time"><?php echo $sortedTime;?></div>
             <section class="share"></section>
             <section class="tags"><?php echo $row['tags'];?></section>
             <section class="disqus"></section>
         </article>
 
 <?php } else {
-    $stmt = $db->query('SELECT
-      ID,
-      title_'.$language.' title,
-      text_'.$language.' text,
-      time,
-      tags
-    FROM
-      blog
-    LIMIT 3');
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
-    $sortedtime=date('G:i d.m.Y.',strtotime($row['time']));
-
+    include "..\\models\\range_load.php";
+    $loader = new loadRange($language,$db);
+    $row=$loader->get_range();
+    while ($loader->result) {
+        $sortedTime=$loader->sortTime($row['time']);
     ?>
 
     <!-- Ukoliko je početna strana bloga -->
             <article>
                 <h1><?php echo $row['title'];?></h1>
                 <section class="text"><?php echo $row['text'];?></section>
-                <div class="time"><?php echo $sortedtime;?></div>
+                <div class="time"><?php echo $sortedTime;?></div>
                 <section class="share"></section>
                 <section class="tags"><?php echo $row['tags'];?></section>
                 <section class="disqus"></section>
