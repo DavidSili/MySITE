@@ -65,11 +65,10 @@ if (isset($_GET['article'])) {
         </article>
 
 <?php } else {
-
     include "..\\models\\range_load.php";
     $loader = new loadRange($language,$db);
-    $row=$loader->get_range();
-    while ($loader->result) {
+    $data=$loader->get_range();
+    foreach ($data as $row) {
         $sortedTime=$loader->sortTime($row['time']);
     ?>
 

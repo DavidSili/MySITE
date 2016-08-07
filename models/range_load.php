@@ -4,6 +4,7 @@
     public $result;
     public $gtime;
     private $row;
+    public $query;
 
     function __construct($lang,$db)
     {
@@ -16,11 +17,14 @@
         FROM
           blog
         LIMIT 3');
-
+        return $this->stmt;
     }
     function get_range () {
-    if ($this->stmt) $this->row=$this->stmt->fetch(PDO::FETCH_ASSOC);
-        return $this->result=$this->row;
+        if ($this->stmt) {
+            $this->stmt->execute();
+            $this->row=$this->stmt->fetchAll();
+        }
+        return $this->row;
     }
 
     function sortTime ($time) {
