@@ -7,10 +7,19 @@ else {
      * Kako budem dodavao prevode tako ću i ovde da dodam jezike. Kasnije će default biti 'en'
      */
 }
-$article= isset($_GET['article']) ? $_GET['article'] : "";
-$tag= isset($_GET['tag']) ? $_GET['tag'] : "";
-$year= isset($_GET['year']) ? $_GET['year'] : "";
-$page= isset($_GET['page']) ? $_GET['page'] : "";
+$type=1;
+if (isset($_GET['tag'])) {
+    $tag=$_GET['tag'];
+    $type=2;
+}
+else $tag="";
+if (isset($_GET['year'])) {
+    $year=$_GET['year'];
+    $type=3;
+}
+else $year="";
+$article= isset($_GET['article']) ? $_GET['article'] : 0;
+$page= isset($_GET['page']) ? $_GET['page'] : 0;
 
 include('../../includes/mysite/config.php');
 include('../languages/'.$language.'.php');
@@ -65,13 +74,13 @@ if (isset($_GET['article'])) {
         </article>
 
 <?php } else {
-    $loader = new loadRange($language,$db);
+
+    $loader = new loadRange($language,$db,$type,$tag,$year,$page);
     $data=$loader->get_range();
     foreach ($data as $row) {
         $sortedTime=$loader->sortTime($row['time']);
     ?>
-
-    <!-- Ukoliko je početna strana bloga -->
+    <!-- Ukoliko je više članaka -->
             <article>
                 <h1><?php echo $row['title'];?></h1>
                 <section class="text"><?php echo $row['text'];?></section>
@@ -91,11 +100,11 @@ if (isset($_GET['article'])) {
 
 ?>
             <h1><?php echo lang('ARCHIVE_TITLE');?></h1>
-            <section id="archiveSpace"><?php echo $godine->prepare_years($db); ?><div style="clear:both"></div></section>
+            <section id="archiveSpace"><?php echo $godine->prepare_years($db); ?></section>
             <h1><?php echo lang('TAGS');?></h1>
-            <section id="tagSpace"><?php echo $tagovi->prepare_tags($db); ?><div style="clear:both"></section>
+            <section id="tagSpace"><?php echo $tagovi->prepare_tags($db); ?></section>
             <h1><?php echo lang('ALL_ARTICLES');?></h1>
-            <section id="artList"><?php echo $others->prepare_others($db); ?><div style="clear:both"></section>
+            <section id="artList"><?php echo $others->prepare_others($db); ?></section>
         </div>
     </div>
 

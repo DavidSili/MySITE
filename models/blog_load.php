@@ -36,10 +36,27 @@ class loadRange {
     public $gtime;
     private $row;
     public $query;
+    private $sql;
+    private $limit;
 
-    function __construct($lang,$db)
+    function limit ($page) {
+        if ($page==0) $this->limit='LIMIT 5';
+        else {
+            $limited=$page*5-1;
+            $this->limit='LIMIT '.$limited.',5';
+        }
+        return $this->limit;
+    }
+
+    function __construct($lang,$db,$type,$tag,$year,$page)
     {
-        $this->stmt=$db->query('SELECT
+        /* case: 1 - starting page of the blog
+        *        2 - blog by tags
+        *        3 - blog by years (archive)
+        */
+        switch ($type) {
+            case 1:
+                $this->sql = 'SELECT
     ID,
       title_' . $lang . ' title,
       text_' . $lang . ' text,
@@ -47,13 +64,47 @@ class loadRange {
       tags
     FROM
       blog
-    LIMIT 3');
-        return $this->stmt;
-    }
-    function get_range () {
-        if ($this->stmt) {
-            $this->stmt->execute();
-            $this->row=$this->stmt->fetchAll();
+    ORDER BY
+      time DESC';
+                $this->sql.=$this->limit($page);
+                $this->stmt=$db->query($this->sql);
+                if ($this->stmt) {
+                    $this->stmt->execute();
+                    $this->row = $this->stmt->fetchAll();
+                }
+                break;
+            case 2:
+                $this->sql = 'SELECT
+    ID,
+      title_' . $lang . ' title,
+      text_' . $lang . ' text,
+      time,
+      tags
+    FROM
+      blog
+    WHERE tags LIKE :tag
+    ORDER BY
+      time DESC';
+                $this->sql.=$this->limit($page);
+                $prep = $db->prepare($this->sql);
+                if ($prep->execute(array(':tag' => '%'.$tag.'%'))) $this->row = $prep->fetchAll();
+                break;
+    case 3:
+                $this->sql = 'SELECT
+    ID,
+      title_' . $lang . ' title,
+      text_' . $lang . ' text,
+      time,
+      tags
+    FROM
+      blog
+    WHERE YEAR(`time`) LIKE :year
+    ORDER BY
+      time DESC';
+                $this->sql.=$this->limit($page);
+                $prep = $db->prepare($this->sql);
+                if ($prep->execute(array(':year' => '%'.$year.'%'))) $this->row = $prep->fetchAll();
+                break;
         }
         return $this->row;
     }

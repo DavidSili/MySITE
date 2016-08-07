@@ -245,6 +245,8 @@ footer {
     background: #595959;
     color:#f8f8f8;
     overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
 }
 #articlebar > h1 {
     color:#f8f8f8;
@@ -252,17 +254,24 @@ footer {
     text-align: center;
     font-size:16pt;
 }
-#archiveSpace, #tagSpace, #artList {
+#archiveSpace, #tagSpace {
     background:#d6d6d6;
     margin:0 5px;
     padding: 3px 2px;
     max-height:150px;
-    overflow-y: auto;
+    overflow-y: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 #artList {
+    background:#d6d6d6;
+    margin:0 5px;
+    padding: 3px 2px;
     overflow-y:auto;
-    max-height: none;
     clear:both;
+    flex-grow: 1;
 }
 .otherContainer {
     background: #f8f8f8;
