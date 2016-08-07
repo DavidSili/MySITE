@@ -233,7 +233,7 @@ footer {
     bottom:0;
     left:0;
     right:200px;
-    background:#f8f8f8;
+    background: #d6d6d6;
     overflow-y:auto;
 }
 #articlebar {
@@ -242,11 +242,73 @@ footer {
     bottom:0;
     right:0;
     width:200px;
-    background:#363636;
+    background: #595959;
     color:#f8f8f8;
+    overflow-y: hidden;
+}
+#articlebar > h1 {
+    color:#f8f8f8;
+    margin:5px;
+    text-align: center;
+    font-size:16pt;
+}
+#archiveSpace, #tagSpace, #artList {
+    background:#d6d6d6;
+    margin:0 5px;
+    padding: 3px 2px;
+    max-height:150px;
+    overflow-y: auto;
+}
+#artList {
+    overflow-y:auto;
+    max-height: none;
+    clear:both;
+}
+.otherContainer {
+    background: #f8f8f8;
+    margin-bottom:3px;
+    padding:3px;
+    display:block;
+    text-decoration: none;
+}
+#artList a:hover, #artList a:active {
+    background: #ffffff;
+}
+.otherContainer h1 {
+    padding:2px 0;
+    margin:0;
+    font-size:10pt;
+}
+.otherTime {
+    text-align: right;
+    color: #595959;
+    font-size:7pt;
+}
+.otherSummary {
+    color: #363636;
+    font-size:10pt;
+    margin-bottom:2px;
+}
+#archiveSpace a, #tagSpace a {
+    background: #f8f8f8;
+    color: #363636;
+    padding: 3px 10px;
+    margin: 3px;
+    font-size: 12pt;
+    height:18px;
+    float:left;
+    display:block;
+    text-decoration: none;
+}
+#archiveSpace a:hover, #archiveSpace a:active, #tagSpace a:hover, #tagSpace a:active {
+    background:#ffffff;
+    text-decoration: underline;
+}
+#tagSpace a {
+    padding: 3px 5px;
 }
 article {
-    background:#d6d6d6;
+    background:#f8f8f8;
     padding:10px;
     margin-bottom:10px;
 }

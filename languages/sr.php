@@ -44,6 +44,9 @@ function lang($phrase){
         'ABOUT_TEXT3' => 'Klijenti sa kojima sam do sada radio:',
         'OV_PROJGITHUB' => 'Projekat na GitHub-u',
         'OV_PROJDEMO' => 'Primer',
+        'ARCHIVE_TITLE' => 'Arhiva',
+        'TAGS' => 'Naznake',
+        'ALL_ARTICLES' => 'Svi članci',
     );
     return $lang[$phrase];
 }

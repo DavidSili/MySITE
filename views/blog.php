@@ -14,6 +14,7 @@ $page= isset($_GET['page']) ? $_GET['page'] : "";
 
 include('../../includes/mysite/config.php');
 include('../languages/'.$language.'.php');
+include('../models/blog_load.php');
 $sitepos="blog";
 ?>
 
@@ -46,7 +47,6 @@ $sitepos="blog";
 $db = new PDO('mysql:host='.$dbhost.';dbname='.$dbname.';charset=utf8mb4', $dbusername, $dbpassword);
 
 if (isset($_GET['article'])) {
-    include "..\\models\\article_load.php";
     $loader = new loadArticle($language,$db);
     $row=$loader->get_article($article);
     $sortedTime=$loader->sortTime();
@@ -65,7 +65,6 @@ if (isset($_GET['article'])) {
         </article>
 
 <?php } else {
-    include "..\\models\\range_load.php";
     $loader = new loadRange($language,$db);
     $data=$loader->get_range();
     foreach ($data as $row) {
@@ -85,9 +84,18 @@ if (isset($_GET['article'])) {
 <?php }} ?>
         </div>
         <div id="articlebar">
+<?php
+    $godine = new showYears($language);
+    $tagovi = new showTags($language);
+    $others = new showOthers($language);
 
-            <!-- Ovde će ići tagovi, biranje na osnovu godine i biranje pojedinačnih nedavnih članaka -->
-
+?>
+            <h1><?php echo lang('ARCHIVE_TITLE');?></h1>
+            <section id="archiveSpace"><?php echo $godine->prepare_years($db); ?><div style="clear:both"></div></section>
+            <h1><?php echo lang('TAGS');?></h1>
+            <section id="tagSpace"><?php echo $tagovi->prepare_tags($db); ?><div style="clear:both"></section>
+            <h1><?php echo lang('ALL_ARTICLES');?></h1>
+            <section id="artList"><?php echo $others->prepare_others($db); ?><div style="clear:both"></section>
         </div>
     </div>
 
