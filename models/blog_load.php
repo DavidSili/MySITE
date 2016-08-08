@@ -14,11 +14,11 @@ class loadArticle {
           tags
         FROM
           blog
-        WHERE ID = ?');
+        WHERE ID = :ID');
 
     }
     function get_article ($article) {
-    if ($this->stmt->execute(array($article))) $row = $this->stmt->fetch(PDO::FETCH_ASSOC);
+    if ($this->stmt->execute(array(':ID'=>$article))) $row = $this->stmt->fetch(PDO::FETCH_ASSOC);
         else $row = "";
         return $this->result=$row;
     }
@@ -35,7 +35,6 @@ class loadRange {
     public $result;
     public $gtime;
     private $row;
-    private $query;
     private $sql;
     private $limit;
     private $lang;
@@ -46,9 +45,10 @@ class loadRange {
     private $page;
 
     function limit ($page) {
-        if ($page==0) $this->limit=' LIMIT 5';
+        if ($page==1) $this->limit=' LIMIT 5';
         else {
-            $limited=$page*5-1;
+            $xpage=$page-1;
+            $limited=$xpage*5-1;
             $this->limit=' LIMIT '.$limited.',5';
         }
         return $this->limit;
@@ -118,12 +118,12 @@ class loadRange {
       tags
     FROM
       blog
-    WHERE YEAR(`time`) LIKE :year
+    WHERE YEAR(`time`) = :year
     ORDER BY
       time DESC';
                 $this->sql.=$this->limit($this->page);
                 $prep = $this->db->prepare($this->sql);
-                if ($prep->execute(array(':year' => '%'.$this->year.'%'))) $this->row = $prep->fetchAll();
+                if ($prep->execute(array(':year' => $this->year))) $this->row = $prep->fetchAll();
                 break;
         }
         return $this->row;
@@ -134,7 +134,6 @@ class loadRange {
 
 class showYears {
     private $stmt;
-    private $row;
     private $lang;
     private $years = array();
     public $formatedText="";
@@ -270,3 +269,77 @@ class showOthers {
 
 }
 
+class pageSelector {
+    private $lang;
+    private $type;
+    private $page;
+    private $year;
+    private $tag;
+    private $stmt;
+
+    function __construct($lang,$type,$page,$year,$tag)
+    {
+        $this->lang=$lang;
+        $this->type=$type;
+        $this->page=$page;
+        $this->year=$year;
+        $this->tag=$tag;
+    }
+    function get_pageSel ($db) {
+        $link="";
+        $row="";
+        switch ($this->type) {
+            case 1:
+                $this->stmt = $db->prepare('SELECT
+                  COUNT(`ID`) cnt
+                FROM
+                  blog');
+                if ($this->stmt->execute()) $row = $this->stmt->fetch(PDO::FETCH_ASSOC);
+                else $row = "";
+                $link = 'blog/'.$this->lang;
+                break;
+            case 2:
+                $this->stmt = $db->prepare('SELECT
+                  COUNT(`ID`) cnt
+                FROM
+                  blog
+                WHERE `tags` LIKE :tag');
+                if ($this->stmt->execute(array(':tag' => '%'.$this->tag.'%'))) $row = $this->stmt->fetch(PDO::FETCH_ASSOC);
+                else $row = "";
+                $link = 'blog/'.$this->lang .'/tag/'.$this->tag;
+                break;
+            case 3:
+                $this->stmt = $db->prepare('SELECT
+                  COUNT(`ID`) cnt
+                FROM
+                  blog
+                WHERE YEAR(`time`) = :year');
+                if ($this->stmt->execute(array(':year' => $this->year))) $row = $this->stmt->fetch(PDO::FETCH_ASSOC);
+                else $row = "";
+                $link = 'blog/' . $this->lang . '/year/' . $this->year;
+                break;
+            }
+        $pages=ceil($row['cnt']/5);
+        if ($pages>1) {
+            $selectPages='<section id="pageSelector">';
+            if ($pages>7) {
+                if ($this->page>5) $selectPages.='<a href="'.$link.'&page=1"><<</a> ...';
+                    for ($i=1; $i <= $pages ; $i++) {
+                        if (($i>($this->page-4) && $i<($this->page+4)) || $this->page==5 || ($pages-$this->page)==4) {
+                            $selectPages.='<a href="'.$link.'&page='.$i.'"';
+                            if ($this->page==$i) $selectPages.=' class="thisPage"';
+                            $selectPages.='>'.$i.'</a>';
+                        }
+                    }
+                if ($pages-$this->page>4) $selectPages.='... <a href="'.$link.'&page='.$pages.'">>></a>';
+            } else {
+                for ($i=1; $i <= $pages ; $i++) {
+                    if ($this->page==$i) $selectPages.='<a class="thisPage">'.$i.'</a>';
+                    else $selectPages.='<a href="'.$link.'&page='.$i.'">'.$i.'</a>';
+                }
+            }
+            $selectPages.='</section>';
+        } else $selectPages="";
+        return $selectPages;
+    }
+}

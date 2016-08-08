@@ -18,9 +18,11 @@ if (isset($_GET['year'])) {
     $type=3;
 }
 else $year="";
-$article= isset($_GET['article']) ? $_GET['article'] : 0;
-$page= isset($_GET['page']) ? $_GET['page'] : 0;
-
+if (isset($_GET['article'])) {
+    $article=$_GET['article'];
+    $type=4;
+}
+$page= isset($_GET['page']) ? $_GET['page'] : 1;
 include('../../includes/mysite/config.php');
 include('../languages/'.$language.'.php');
 include('../models/blog_load.php');
@@ -65,7 +67,7 @@ if (isset($_GET['article'])) {
     <!-- Ukoliko je pojedinačni članak -->
 
         <article>
-            <h1><?php echo $row['title'];?></h1>
+            <h1><?php echo $row['ID'].' - '.$row['title'];?></h1>
             <section class="text"><?php echo $row['text'];?></section>
             <div class="time"><?php echo $sortedTime;?></div>
             <section class="share"></section>
@@ -90,7 +92,11 @@ if (isset($_GET['article'])) {
                 <section class="disqus"></section>
             </article>
 
-<?php }} ?>
+<?php }}
+            if ($type!=4) {
+                $pagesel = new pageSelector($language, $type, $page, $year, $tag);
+                echo $pagesel->get_pageSel($db);
+            }?>
         </div>
         <div id="articlebar">
 <?php
