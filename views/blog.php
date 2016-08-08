@@ -74,13 +74,13 @@ if (isset($_GET['article'])) {
         </article>
 
 <?php } else {
+    // Ukoliko je više članaka
 
     $loader = new loadRange($language,$db,$type,$tag,$year,$page);
     $data=$loader->get_range();
     foreach ($data as $row) {
         $sortedTime=$loader->sortTime($row['time']);
     ?>
-    <!-- Ukoliko je više članaka -->
             <article>
                 <h1><?php echo $row['title'];?></h1>
                 <section class="text"><?php echo $row['text'];?></section>

@@ -35,39 +35,59 @@ class loadRange {
     public $result;
     public $gtime;
     private $row;
-    public $query;
+    private $query;
     private $sql;
     private $limit;
+    private $lang;
+    private $db;
+    private $type;
+    private $tag;
+    private $year;
+    private $page;
 
     function limit ($page) {
-        if ($page==0) $this->limit='LIMIT 5';
+        if ($page==0) $this->limit=' LIMIT 5';
         else {
             $limited=$page*5-1;
-            $this->limit='LIMIT '.$limited.',5';
+            $this->limit=' LIMIT '.$limited.',5';
         }
         return $this->limit;
     }
 
     function __construct($lang,$db,$type,$tag,$year,$page)
     {
+        $this->lang=$lang;
+        $this->db=$db;
+        $this->type=$type;
+        $this->tag=$tag;
+        $this->year=$year;
+        $this->page=$page;
+    }
+
+    function sortTime ($time) {
+        $this->gtime = date('G:i d.m.Y.', strtotime($time));
+        return $this->gtime;
+    }
+
+    function get_range () {
         /* case: 1 - starting page of the blog
         *        2 - blog by tags
         *        3 - blog by years (archive)
         */
-        switch ($type) {
+        switch ($this->type) {
             case 1:
                 $this->sql = 'SELECT
     ID,
-      title_' . $lang . ' title,
-      text_' . $lang . ' text,
+      title_' . $this->lang . ' title,
+      text_' . $this->lang . ' text,
       time,
       tags
     FROM
       blog
     ORDER BY
       time DESC';
-                $this->sql.=$this->limit($page);
-                $this->stmt=$db->query($this->sql);
+                $this->sql.=$this->limit($this->page);
+                $this->stmt=$this->db->query($this->sql);
                 if ($this->stmt) {
                     $this->stmt->execute();
                     $this->row = $this->stmt->fetchAll();
@@ -76,8 +96,8 @@ class loadRange {
             case 2:
                 $this->sql = 'SELECT
     ID,
-      title_' . $lang . ' title,
-      text_' . $lang . ' text,
+      title_' . $this->lang . ' title,
+      text_' . $this->lang . ' text,
       time,
       tags
     FROM
@@ -85,15 +105,15 @@ class loadRange {
     WHERE tags LIKE :tag
     ORDER BY
       time DESC';
-                $this->sql.=$this->limit($page);
-                $prep = $db->prepare($this->sql);
-                if ($prep->execute(array(':tag' => '%'.$tag.'%'))) $this->row = $prep->fetchAll();
+                $this->sql.=$this->limit($this->page);
+                $prep = $this->db->prepare($this->sql);
+                if ($prep->execute(array(':tag' => '%'.$this->tag.'%'))) $this->row = $prep->fetchAll();
                 break;
-    case 3:
+            case 3:
                 $this->sql = 'SELECT
     ID,
-      title_' . $lang . ' title,
-      text_' . $lang . ' text,
+      title_' . $this->lang . ' title,
+      text_' . $this->lang . ' text,
       time,
       tags
     FROM
@@ -101,20 +121,16 @@ class loadRange {
     WHERE YEAR(`time`) LIKE :year
     ORDER BY
       time DESC';
-                $this->sql.=$this->limit($page);
-                $prep = $db->prepare($this->sql);
-                if ($prep->execute(array(':year' => '%'.$year.'%'))) $this->row = $prep->fetchAll();
+                $this->sql.=$this->limit($this->page);
+                $prep = $this->db->prepare($this->sql);
+                if ($prep->execute(array(':year' => '%'.$this->year.'%'))) $this->row = $prep->fetchAll();
                 break;
         }
         return $this->row;
     }
 
-    function sortTime ($time) {
-        $this->gtime = date('G:i d.m.Y.', strtotime($time));
-        return $this->gtime;
-    }
-
 }
+
 
 class showYears {
     private $stmt;
@@ -247,7 +263,7 @@ class showOthers {
         $data= $this->get_others ($db);
         foreach ($data as $row) {
             $sortedTime = date('G:i d.m.Y.', strtotime($row['time']));
-            $this->formatedText.='<a href="blog/'.$this->lang.'/tag/'.$row['ID'].'" class="otherContainer"><h1>'.$row['title'].'</h1><div class="otherSummary">'.$row['summary'].'</div><div class="otherTime">'.$sortedTime.'</div></a>';
+            $this->formatedText.='<a href="blog/'.$this->lang.'/'.$row['ID'].'" class="otherContainer"><h1>'.$row['title'].'</h1><div class="otherSummary">'.$row['summary'].'</div><div class="otherTime">'.$sortedTime.'</div></a>';
         }
         return $this->formatedText;
     }
