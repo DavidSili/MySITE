@@ -47,6 +47,7 @@ function lang($phrase){
         'ARCHIVE_TITLE' => 'Arhiva',
         'TAGS' => 'Naznake',
         'ALL_ARTICLES' => 'Svi članci',
+        'WRITTEN_AT' => 'Napisano u',
     );
     return $lang[$phrase];
 }

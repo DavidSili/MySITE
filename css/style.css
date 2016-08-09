@@ -21,6 +21,16 @@ footer {
     bottom:0;
     height:50px;
 }
+pre {
+    white-space: pre-wrap;       /* css-3 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+code {
+    background: #ffffff;
+}
 #wrapbig {
     position:absolute;
     top:50px;
@@ -316,10 +326,31 @@ footer {
 #tagSpace a {
     padding: 3px 5px;
 }
+.time {
+    margin-top: 5px;
+    font-style: italic;
+}
+.tags {
+    margin-top: 5px;
+    padding: 2px;
+}
+.tags div {
+    padding: 3px 5px;
+    margin: 2px 3px;
+    background: #595959;
+    color: #f8f8f8;
+    display: inline-block;
+    }
 article {
     background:#f8f8f8;
     padding:10px;
     margin-bottom:10px;
+}
+article p:first-child {
+    margin-top:0;
+}
+article p:last-child {
+    margin-bottom:0;
 }
 article h1 {
     margin:0 0 3px 0;

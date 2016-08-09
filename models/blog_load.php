@@ -17,6 +17,15 @@ if (isset($_GET['article'])) {
 }
 $page= isset($_GET['page']) ? $_GET['page'] : 1;
 
+function convertTags ($string) {
+    $tagovi=explode(', ',$string);
+    $formatedTags='';
+    foreach ($tagovi as $tag) {
+        $formatedTags.='<div>'.$tag.'</div>';
+    }
+    return $formatedTags;
+}
+
 class loadArticle {
     private $stmt;
     public $result;
@@ -36,7 +45,7 @@ class loadArticle {
 
     }
     function get_article ($article) {
-    if ($this->stmt->execute(array(':ID'=>$article))) $row = $this->stmt->fetch(PDO::FETCH_ASSOC);
+        if ($this->stmt->execute(array(':ID'=>$article))) $row = $this->stmt->fetch(PDO::FETCH_ASSOC);
         else $row = "";
         return $this->result=$row;
     }

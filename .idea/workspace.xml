@@ -4,6 +4,7 @@
     <list default="true" id="8d0ce1a2-b25e-4801-b837-196363691c36" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/languages/sr.php" afterPath="$PROJECT_DIR$/languages/sr.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/blog_load.php" afterPath="$PROJECT_DIR$/models/blog_load.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/blog.php" afterPath="$PROJECT_DIR$/views/blog.php" />
     </list>
@@ -30,8 +31,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="324" column="20" selection-start-line="324" selection-start-column="20" selection-end-line="324" selection-end-column="20" />
+            <state vertical-scroll-proportion="-20.346153">
+              <caret line="352" column="20" selection-start-line="352" selection-start-column="20" selection-end-line="352" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -40,8 +41,8 @@
       <file leaf-file-name="blog.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/blog.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49655172">
-              <caret line="63" column="54" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.6189655">
+              <caret line="95" column="50" selection-start-line="95" selection-start-column="50" selection-end-line="95" selection-end-column="50" />
               <folding />
             </state>
           </provider>
@@ -50,18 +51,18 @@
       <file leaf-file-name="blog_load.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/blog_load.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1470764912356" expanded="true" signature="3835:3927" placeholder="SELECT YEAR(..." />
-                <marker date="1470764912356" expanded="true" signature="4789:4855" placeholder="SELECT MAX(u..blogtags..." />
-                <marker date="1470764912356" expanded="true" signature="5122:5208" placeholder="SELECT name,..blogtags..." />
-                <marker date="1470764912356" expanded="true" signature="6267:6282" placeholder="SELECT YEAR(..." />
-                <marker date="1470764912356" expanded="true" signature="6267:6418" placeholder="SELECT ID, t..." />
-                <marker date="1470764912356" expanded="true" signature="7554:7638" placeholder="SELECT COUNT..blog..." />
-                <marker date="1470764912356" expanded="true" signature="7895:8018" placeholder="SELECT COUNT..blog..." />
-                <marker date="1470764912356" expanded="true" signature="8330:8414" placeholder="SELECT COUNT..blog..." />
-                <marker date="1470764912356" expanded="true" signature="8330:8457" placeholder="SELECT COUNT..blog..." />
+                <marker date="1470778810841" expanded="true" signature="4042:4134" placeholder="SELECT YEAR(..." />
+                <marker date="1470778810841" expanded="true" signature="4996:5062" placeholder="SELECT MAX(u..blogtags..." />
+                <marker date="1470778810841" expanded="true" signature="5329:5415" placeholder="SELECT name,..blogtags..." />
+                <marker date="1470778810841" expanded="true" signature="6474:6489" placeholder="SELECT YEAR(..." />
+                <marker date="1470778810841" expanded="true" signature="6474:6625" placeholder="SELECT ID, t..." />
+                <marker date="1470778810841" expanded="true" signature="7761:7845" placeholder="SELECT COUNT..blog..." />
+                <marker date="1470778810841" expanded="true" signature="8102:8225" placeholder="SELECT COUNT..blog..." />
+                <marker date="1470778810841" expanded="true" signature="8537:8621" placeholder="SELECT COUNT..blog..." />
+                <marker date="1470778810841" expanded="true" signature="8537:8664" placeholder="SELECT COUNT..blog..." />
               </folding>
             </state>
           </provider>
@@ -81,7 +82,7 @@
         <entry file="file://$PROJECT_DIR$/languages/sr.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+              <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -141,8 +142,8 @@
         <option value="$PROJECT_DIR$/models/connector.php" />
         <option value="$PROJECT_DIR$/models/article_load.php" />
         <option value="$PROJECT_DIR$/models/range_load.php" />
-        <option value="$PROJECT_DIR$/languages/sr.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/languages/sr.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/models/blog_load.php" />
         <option value="$PROJECT_DIR$/views/blog.php" />
@@ -336,7 +337,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13469985" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13469985" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -354,6 +355,25 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13469985" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -697,40 +717,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="324" column="20" selection-start-line="324" selection-start-column="20" selection-end-line="324" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/blog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49655172">
-          <caret line="63" column="54" selection-start-line="63" selection-start-column="54" selection-end-line="63" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/blog_load.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <marker date="1470764912356" expanded="true" signature="3835:3927" placeholder="SELECT YEAR(..." />
-            <marker date="1470764912356" expanded="true" signature="4789:4855" placeholder="SELECT MAX(u..blogtags..." />
-            <marker date="1470764912356" expanded="true" signature="5122:5208" placeholder="SELECT name,..blogtags..." />
-            <marker date="1470764912356" expanded="true" signature="6267:6282" placeholder="SELECT YEAR(..." />
-            <marker date="1470764912356" expanded="true" signature="6267:6418" placeholder="SELECT ID, t..." />
-            <marker date="1470764912356" expanded="true" signature="7554:7638" placeholder="SELECT COUNT..blog..." />
-            <marker date="1470764912356" expanded="true" signature="7895:8018" placeholder="SELECT COUNT..blog..." />
-            <marker date="1470764912356" expanded="true" signature="8330:8414" placeholder="SELECT COUNT..blog..." />
-            <marker date="1470764912356" expanded="true" signature="8330:8457" placeholder="SELECT COUNT..blog..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -742,7 +728,41 @@
     <entry file="file://$PROJECT_DIR$/languages/sr.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="1" selection-start-line="51" selection-start-column="1" selection-end-line="51" selection-end-column="1" />
+          <caret line="49" column="37" selection-start-line="49" selection-start-column="37" selection-end-line="49" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.346153">
+          <caret line="352" column="20" selection-start-line="352" selection-start-column="20" selection-end-line="352" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/blog_load.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1470778810841" expanded="true" signature="4042:4134" placeholder="SELECT YEAR(..." />
+            <marker date="1470778810841" expanded="true" signature="4996:5062" placeholder="SELECT MAX(u..blogtags..." />
+            <marker date="1470778810841" expanded="true" signature="5329:5415" placeholder="SELECT name,..blogtags..." />
+            <marker date="1470778810841" expanded="true" signature="6474:6489" placeholder="SELECT YEAR(..." />
+            <marker date="1470778810841" expanded="true" signature="6474:6625" placeholder="SELECT ID, t..." />
+            <marker date="1470778810841" expanded="true" signature="7761:7845" placeholder="SELECT COUNT..blog..." />
+            <marker date="1470778810841" expanded="true" signature="8102:8225" placeholder="SELECT COUNT..blog..." />
+            <marker date="1470778810841" expanded="true" signature="8537:8621" placeholder="SELECT COUNT..blog..." />
+            <marker date="1470778810841" expanded="true" signature="8537:8664" placeholder="SELECT COUNT..blog..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/blog.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6189655">
+          <caret line="95" column="50" selection-start-line="95" selection-start-column="50" selection-end-line="95" selection-end-column="50" />
           <folding />
         </state>
       </provider>

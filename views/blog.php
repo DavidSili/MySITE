@@ -50,13 +50,13 @@ if (isset($_GET['article'])) {
     <!-- Ukoliko je pojedinačni članak -->
 
         <article>
-            <h1><?php echo $row['ID'].' - '.$row['title'];?></h1>
+            <h1><?php echo $row['title'];?></h1>
             <section class="social">
             </section>
-            <section class="text"><?php echo $row['text'];?></section>
-            <div class="time"><?php echo $sortedTime;?></div>
+            <section class="text"><?php echo $row['text'];?>
+            <div class="time"><?php echo lang('WRITTEN_AT').' '.$sortedTime;?></div></section>
             <section class="share"></section>
-            <section class="tags"><?php echo $row['tags'];?></section>
+            <section class="tags"><?php echo convertTags($row['tags']);?></section>
             <section class="disqus">
                 <div id="disqus_thread"></div>
                 <script>
@@ -89,10 +89,10 @@ if (isset($_GET['article'])) {
                 <h1><?php echo $row['title'];?></h1>
                 <section class="social">
                 </section>
-                <section class="text"><?php echo $row['text'];?></section>
-                <div class="time"><?php echo $sortedTime;?></div>
+                <section class="text"><?php echo $row['text'];?>
+                <div class="time"><?php echo lang('WRITTEN_AT').' '.$sortedTime;?></div></section>
                 <section class="share"></section>
-                <section class="tags"><?php echo $row['tags'];?></section>
+                <section class="tags"><?php echo convertTags($row['tags']);?></section>
                 <section class="disqus"></section>
             </article>
 
