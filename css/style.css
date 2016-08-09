@@ -322,7 +322,7 @@ article {
     margin-bottom:10px;
 }
 article h1 {
-    margin:0 0 10px 0;
+    margin:0 0 3px 0;
 }
 article .time {
     text-align: right;
@@ -341,8 +341,8 @@ article .text {
 article .tags {
     color: #363636;
 }
-article .share {
-
+article .social {
+    margin-bottom:5px;
 }
 article .disqus {
 

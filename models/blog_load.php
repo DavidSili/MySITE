@@ -1,4 +1,22 @@
 <?php
+$sitepos="blog";
+$type=1;
+if (isset($_GET['tag'])) {
+    $tag=$_GET['tag'];
+    $type=2;
+}
+else $tag="";
+if (isset($_GET['year'])) {
+    $year=$_GET['year'];
+    $type=3;
+}
+else $year="";
+if (isset($_GET['article'])) {
+    $article=$_GET['article'];
+    $type=4;
+}
+$page= isset($_GET['page']) ? $_GET['page'] : 1;
+
 class loadArticle {
     private $stmt;
     public $result;

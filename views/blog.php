@@ -7,26 +7,9 @@ else {
      * Kako budem dodavao prevode tako ću i ovde da dodam jezike. Kasnije će default biti 'en'
      */
 }
-$type=1;
-if (isset($_GET['tag'])) {
-    $tag=$_GET['tag'];
-    $type=2;
-}
-else $tag="";
-if (isset($_GET['year'])) {
-    $year=$_GET['year'];
-    $type=3;
-}
-else $year="";
-if (isset($_GET['article'])) {
-    $article=$_GET['article'];
-    $type=4;
-}
-$page= isset($_GET['page']) ? $_GET['page'] : 1;
+include('../models/blog_load.php');
 include('../../includes/mysite/config.php');
 include('../languages/'.$language.'.php');
-include('../models/blog_load.php');
-$sitepos="blog";
 ?>
 
 <!doctype html>
@@ -68,11 +51,30 @@ if (isset($_GET['article'])) {
 
         <article>
             <h1><?php echo $row['ID'].' - '.$row['title'];?></h1>
+            <section class="social">
+            </section>
             <section class="text"><?php echo $row['text'];?></section>
             <div class="time"><?php echo $sortedTime;?></div>
             <section class="share"></section>
             <section class="tags"><?php echo $row['tags'];?></section>
-            <section class="disqus"></section>
+            <section class="disqus">
+                <div id="disqus_thread"></div>
+                <script>
+
+                     var disqus_config = function () {
+                         this.page.url = "http://www.davidsili.com/blog/<?php echo $language.'/'.$row['ID'];?>";
+                         this.page.identifier = "<?php $row['ID'] ?>";
+                         this.page.title = "<?php $row['title'] ?>";
+                     };
+                    (function() {
+                        var d = document, s = d.createElement('script');
+                        s.src = '//david-sili.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </section>
         </article>
 
 <?php } else {
@@ -85,6 +87,8 @@ if (isset($_GET['article'])) {
     ?>
             <article>
                 <h1><?php echo $row['title'];?></h1>
+                <section class="social">
+                </section>
                 <section class="text"><?php echo $row['text'];?></section>
                 <div class="time"><?php echo $sortedTime;?></div>
                 <section class="share"></section>
