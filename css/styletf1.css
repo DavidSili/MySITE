@@ -13,6 +13,25 @@
     margin: 17px 20px 0 10px;
     height: 33px
 }
+#wrapbig {
+    position:absolute;
+    top:50px;
+    bottom:50px;
+    left:0;
+    right:0;
+    background-color: #d6d6d6;
+    overflow-y:auto;
+    font-family:Arial;
+}
+nav {
+    position:absolute;
+    top:0;
+    height: 50px;
+    width: 100%;
+    padding: 0;
+    background-color: #363636;
+    overflow: hidden;
+}
 nav > a {
     color: #f8f8f8;
     text-decoration: none;
@@ -29,4 +48,8 @@ nav > a {
 #social_btns a {
     text-decoration: none;
     margin: 0px 10px 0 0;
+}
+#social_btns img {
+    width: 7%;
+    max-width: 30px;
 }

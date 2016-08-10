@@ -31,17 +31,6 @@ pre {
 code {
     background: #ffffff;
 }
-#wrapbig {
-    position:absolute;
-    top:50px;
-    bottom:50px;
-    left:0;
-    right:0;
-    background-color: #d6d6d6;
-    overflow-y:auto;
-    font-family:Arial;
-
-}
 #wrapsmall {
     background-color: #f8f8f8;
     width:100%;
@@ -54,15 +43,6 @@ code {
 
                 /* CSS za toolbar */
 
-nav {
-    position:absolute;
-    top:0;
-    height: 50px;
-    width: 100%;
-    padding: 0;
-    background-color: #363636;
-    overflow: hidden;
-}
 nav > a:hover, .a_selected {
     text-decoration: underline;
 }
@@ -106,9 +86,6 @@ footer {
     display: block;
     height: 40px;
     margin-top:10px;
-}
-#social_btns img {
-    height: 30px;
 }
 
                 /* CSS za index */

@@ -27,7 +27,8 @@ $sitepos="about";
     <link rel="stylesheet" href="css/style.css">
     <link rel='stylesheet' media='screen and (max-width: 700px)' href='css/stylea1.css' />
     <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/stylea2.css' />
-    <link rel='stylesheet' media='screen and (max-width: 700px)' href='css/styletf1.css' />
+    <link rel='stylesheet' media='screen and (max-width: 555px)' href='css/styletfm.css' />
+    <link rel='stylesheet' media='screen and (min-width: 556px) and (max-width: 700px)' href='css/styletf1.css' />
     <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/styletf2.css' />
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="js/jR3DCarousel.js"></script>

@@ -27,7 +27,8 @@ $sitepos="availability";
     <link rel="stylesheet" href="css/style.css">
     <link rel='stylesheet' media='screen and (max-width: 900px)' href='css/styleav1.css' />
     <link rel='stylesheet' media='screen and (min-width: 901px)' href='css/styleav2.css' />
-    <link rel='stylesheet' media='screen and (max-width: 700px)' href='css/styletf1.css' />
+    <link rel='stylesheet' media='screen and (max-width: 555px)' href='css/styletfm.css' />
+    <link rel='stylesheet' media='screen and (min-width: 556px) and (max-width: 700px)' href='css/styletf1.css' />
     <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/styletf2.css' />
 </head>
 <body id="body_avail">

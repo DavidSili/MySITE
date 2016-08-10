@@ -29,7 +29,8 @@ include('../languages/'.$language.'.php');
     <link rel='stylesheet' media='screen and (min-width: 701px) and (max-width:1000px)' href='css/styleb2.css' />
     <link rel='stylesheet' media='screen and (min-width: 1001px) and (max-width:1200px)' href='css/styleb3.css' />
     <link rel='stylesheet' media='screen and (min-width: 1201px)' href='css/styleb4.css' />
-    <link rel='stylesheet' media='screen and (max-width: 700px)' href='css/styletf1.css' />
+    <link rel='stylesheet' media='screen and (max-width: 555px)' href='css/styletfm.css' />
+    <link rel='stylesheet' media='screen and (min-width: 556px) and (max-width: 700px)' href='css/styletf1.css' />
     <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/styletf2.css' />
 </head>
 <body>
