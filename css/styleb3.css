@@ -1,0 +1,31 @@
+/* CSS za Blog */
+
+#articlearea {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 30%;
+    background: #d6d6d6;
+    overflow-y:auto;
+}
+#articlebar {
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    width: 30%;
+    background: #595959;
+    color:#f8f8f8;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+}
+#artList {
+    background:#d6d6d6;
+    margin:0 5px;
+    padding: 3px 2px;
+    overflow-y:auto;
+    clear:both;
+    flex-grow: 1;
+}

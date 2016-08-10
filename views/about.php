@@ -23,7 +23,7 @@ $sitepos="about";
           href="images/favicon.gif">
     <meta name="description" content="<?php echo lang('DESCRIPTION');?>">
     <meta name="author" content="<?php echo lang('AUTHOR');?>">
-    <meta name=viewport content='width=540'>
+    <meta name=viewport content='width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;'>
     <link rel="stylesheet" href="css/style.css">
     <link rel='stylesheet' media='screen and (max-width: 700px)' href='css/stylea1.css' />
     <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/stylea2.css' />

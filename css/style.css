@@ -237,27 +237,6 @@ footer {
 }
                 /* CSS za Blog */
 
-#articlearea {
-    position:absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:200px;
-    background: #d6d6d6;
-    overflow-y:auto;
-}
-#articlebar {
-    position:absolute;
-    top:0;
-    bottom:0;
-    right:0;
-    width:200px;
-    background: #595959;
-    color:#f8f8f8;
-    overflow-y: hidden;
-    display: flex;
-    flex-direction: column;
-}
 #articlebar > h1 {
     color:#f8f8f8;
     margin:5px;
@@ -274,14 +253,6 @@ footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-}
-#artList {
-    background:#d6d6d6;
-    margin:0 5px;
-    padding: 3px 2px;
-    overflow-y:auto;
-    clear:both;
-    flex-grow: 1;
 }
 .otherContainer {
     background: #f8f8f8;
@@ -340,7 +311,7 @@ footer {
     background: #595959;
     color: #f8f8f8;
     display: inline-block;
-    }
+}
 article {
     background:#f8f8f8;
     padding:10px;
@@ -358,25 +329,11 @@ article h1 {
 article .time {
     text-align: right;
 }
-article .text {
-    -webkit-column-count: 2;
-    -moz-column-count: 2;
-    column-count: 2;
-    -webkit-column-gap: 20px;
-    -moz-column-gap: 20px;
-    column-gap: 20px;
-    -webkit-column-rule: 3px solid #363636;
-    -moz-column-rule: 3px solid #363636;
-    column-rule: 3px solid #363636;
-}
 article .tags {
     color: #363636;
 }
 article .social {
     margin-bottom:5px;
-}
-article .disqus {
-
 }
 #pageSelector {
     width:100%;
