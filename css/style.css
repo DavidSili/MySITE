@@ -30,6 +30,12 @@ pre {
 }
 code {
     background: #ffffff;
+    display: block;
+    margin-left: 10px;
+    padding: 2px 5px;
+}
+p code {
+    display: inline;
 }
 #wrapsmall {
     background-color: #f8f8f8;
